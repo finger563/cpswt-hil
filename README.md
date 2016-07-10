@@ -91,3 +91,8 @@ querying interfaces.
 
 ## Sample Implementation
 
+The sample implementation for this HiL service / proxy will be
+developed using C2WT (HLA) for the distributed simulation federates
+and using ZeroMQ + Protobuf for the HiL ATP.  The communication
+between the proxy federate and the HiL service will be ZeroMQ +
+Protobuf for ease of specification and for speed.
