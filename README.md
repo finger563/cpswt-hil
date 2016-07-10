@@ -96,3 +96,19 @@ developed using C2WT (HLA) for the distributed simulation federates
 and using ZeroMQ + Protobuf for the HiL ATP.  The communication
 between the proxy federate and the HiL service will be ZeroMQ +
 Protobuf for ease of specification and for speed.
+
+The sample for this will be a set of traffic intersections.  The
+controllers for the traffic lights at the intersections will be
+federates in the federation, while the sensors and actuators (and the
+physical system) will be the HiL.  The federates will need to get
+sensor streams from the HiL which contain the current queue lengths of
+cars at each of the intersections, and the controller federates will
+send actuation commands to the traffic lights to set their states.
+
+To enable this scenario, the HiL service will provide an interface by
+which the proxy federate will query (and validate) the available
+traffic lights and sensors which exist in the HiL system and with
+which the proxy will establish communication flows.  The flow mapping
+between the sensors, actuators, and controllers will be provided as
+configuration data to the proxy federate which it will parse and set
+up through the configuration interface of the HiL service process.
