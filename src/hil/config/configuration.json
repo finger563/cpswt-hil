@@ -1,0 +1,95 @@
+{
+    "Component Instances": [
+	{
+	    "Name" : "sensor_1",
+	    "Definition" : "sensor_1.so",
+
+	    "Timers" : [
+		{
+		    "Name" : "timer",
+		    "Period" : 500000000,
+		    "Priority" : 50,
+		    "Function" : "timer_function"
+		}
+	    ],	    
+
+	    "Publishers" : [
+		{
+		    "Name" : "sensor_1_pub",
+		    "Endpoints" : ["tcp://*:5555"]
+		}
+	    ]
+	},
+	{
+	    "Name" : "sensor_2",	  
+	    "Definition" : "sensor_2.so",
+
+	    "Timers" : [
+		{
+		    "Name" : "timer",
+		    "Period" : 1000000000,
+		    "Priority" : 50,
+		    "Function" : "timer_function"
+		}
+	    ],	    	    
+
+	    "Publishers" : [
+		{
+		    "Name" : "sensor_2_pub",
+		    "Endpoints" : ["tcp://*:5556"]
+		}
+	    ]
+	},
+
+	{
+	    "Name" : "aggregator",	  
+	    "Definition" : "aggregator.so",
+
+	    "Timers" : [
+		{
+		    "Name" : "timer",
+		    "Period" : 1000000000,
+		    "Priority" : 50,
+		    "Function" : "timer_function"
+		}
+	    ],
+
+	    "Subscribers" : [
+		{
+		    "Name" : "sensor_1_sub",
+		    "Priority": 60,
+		    "Filter": "",
+		    "Function": "sensor_1_sub_operation",
+		    "Endpoints" : ["tcp://127.0.0.1:5555"]
+		},
+		{
+		    "Name" : "sensor_2_sub",
+		    "Priority": 60,
+		    "Filter": "",
+		    "Function": "sensor_2_sub_operation",
+		    "Endpoints" : ["tcp://127.0.0.1:5556"]
+		}
+	    ],
+
+	    "Publishers" : [
+		{
+		    "Name" : "aggregated_pub",
+		    "Endpoints" : ["tcp://*:5557"]
+		}
+	    ]
+	},
+	{
+	    "Name" : "predictor",	  
+	    "Definition" : "predictor.so",
+	    "Subscribers" : [
+		{
+		    "Name" : "aggregated_sub",
+		    "Priority": 60,
+		    "Filter": "",
+		    "Function": "subscriber_function",
+		    "Endpoints" : ["tcp://127.0.0.1:5557"]
+		}
+	    ] 
+	}
+    ]
+}
