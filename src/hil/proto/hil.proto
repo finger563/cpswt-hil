@@ -1,3 +1,5 @@
+syntax = "proto3";
+
 message E3SensorData {
   string sensorName = 1;
   uint64 numVehiclesPresent = 2;

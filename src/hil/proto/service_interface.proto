@@ -1,6 +1,19 @@
+syntax = "proto3";
+
 message Base {
   string messageType = 1;
   bytes messageData = 2;
+}
+
+message Requirement {
+  repeated Service services = 1;
+  repeated Stream streams = 2;
+}
+
+message Connect {
+  string federationName = 1;
+  bytes authData = 2;
+  repeated Requirement requirements = 3;
 }
 
 message Node {
@@ -9,28 +22,36 @@ message Node {
   uint32 port = 3;
 }
 
-message Source {
-};
-
-message Destination {
-}
-
 message Flow {
+  Node source = 1;
+  repeated Node destinations = 2;
 }
 
 message Stream {
+  Flow flow = 1;
+  SensorData data = 2;
 }
 
 message Service {
+  Node source = 1;
+  Node destination = 2;
 }
 
 message Header {
-  Source source = 1;
-  Destination destination = 2;
+  Node source = 1;
+  Node destination = 2;
+}
+
+message AbstractData {
+  string name = 1;
+  string type = 2;
+  bytes data = 3;
 }
 
 message SensorData {
+  AbstractData data = 1;
 }
 
 message ActuatorCommand {
+  AbstractData data = 1;
 }
