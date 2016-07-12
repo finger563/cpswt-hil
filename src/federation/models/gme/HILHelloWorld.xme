@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE project SYSTEM "mga.dtd">
 
-<project guid="{7AB4FDB5-6352-4F9A-9E0A-82003579A254}" cdate="Tue Jul 12 14:51:21 2016" mdate="Tue Jul 12 14:51:21 2016" version="" metaguid="{2664F06E-397F-48A5-8AA9-D5E5C8190F07}" metaversion="" metaname="CASIM">
+<project guid="{90BD2CB9-BB83-4487-B414-420FA15BBAFD}" cdate="Tue Jul 12 14:51:21 2016" mdate="Tue Jul 12 14:51:21 2016" version="" metaguid="{2664F06E-397F-48A5-8AA9-D5E5C8190F07}" metaversion="" metaname="CASIM">
 	<name>HILHelloWorld</name>
 	<comment></comment>
 	<author></author>
@@ -269,136 +269,19 @@
 				<connpoint role="dst" target="id-0067-00000024"/>
 			</connection>
 		</model>
-		<model id="id-0065-00000004" kind="FOMSheet" guid="{48a06709-fbe9-425f-a0b8-546cf80f198f}" relid="0x5" childrelidcntr="0x34">
+		<model id="id-0065-00000004" kind="FOMSheet" guid="{48a06709-fbe9-425f-a0b8-546cf80f198f}" relid="0x5" childrelidcntr="0x37">
 			<name>Federates</name>
 			<attribute kind="MelderPackageName" status="meta">
 				<value></value>
 			</attribute>
 			<model id="id-0065-00000007" kind="Federate" role="Federate" guid="{e10fcb50-db96-4d29-894e-638a56c1ff2f}" relid="0x7" childrelidcntr="0x0">
-				<name>Controller1</name>
+				<name>Controller</name>
 				<regnode name="PartRegs" status="undefined">
 					<value></value>
 					<regnode name="Aspect" status="undefined">
 						<value></value>
 						<regnode name="Position" isopaque="yes">
 							<value>308,21</value>
-						</regnode>
-					</regnode>
-				</regnode>
-				<attribute kind="EnableROAsynchronousDelivery" status="meta">
-					<value>true</value>
-				</attribute>
-				<attribute kind="FederateType">
-					<value>2</value>
-				</attribute>
-				<attribute kind="GeneratorClass" status="meta">
-					<value></value>
-				</attribute>
-				<attribute kind="InstantiationScript" status="meta">
-					<value></value>
-				</attribute>
-				<attribute kind="Lookahead" status="meta">
-					<value>0.20000000000000001</value>
-				</attribute>
-				<attribute kind="Meld" status="meta">
-					<value>false</value>
-				</attribute>
-				<attribute kind="Step" status="meta">
-					<value>1</value>
-				</attribute>
-				<attribute kind="TimeConstrained" status="meta">
-					<value>true</value>
-				</attribute>
-				<attribute kind="TimeRegulating" status="meta">
-					<value>true</value>
-				</attribute>
-			</model>
-			<model id="id-0065-00000053" kind="Federate" role="Federate" guid="{1f499cb2-ff84-4ec6-9d53-3c9da8ea4d3f}" relid="0x25" childrelidcntr="0x0">
-				<name>Controller2</name>
-				<regnode name="PartRegs" status="undefined">
-					<value></value>
-					<regnode name="Aspect" status="undefined">
-						<value></value>
-						<regnode name="Position" isopaque="yes">
-							<value>308,91</value>
-						</regnode>
-					</regnode>
-				</regnode>
-				<attribute kind="EnableROAsynchronousDelivery" status="meta">
-					<value>true</value>
-				</attribute>
-				<attribute kind="FederateType">
-					<value>2</value>
-				</attribute>
-				<attribute kind="GeneratorClass" status="meta">
-					<value></value>
-				</attribute>
-				<attribute kind="InstantiationScript" status="meta">
-					<value></value>
-				</attribute>
-				<attribute kind="Lookahead" status="meta">
-					<value>0.20000000000000001</value>
-				</attribute>
-				<attribute kind="Meld" status="meta">
-					<value>false</value>
-				</attribute>
-				<attribute kind="Step" status="meta">
-					<value>1</value>
-				</attribute>
-				<attribute kind="TimeConstrained" status="meta">
-					<value>true</value>
-				</attribute>
-				<attribute kind="TimeRegulating" status="meta">
-					<value>true</value>
-				</attribute>
-			</model>
-			<model id="id-0065-00000054" kind="Federate" role="Federate" guid="{48e629af-9c60-49b5-ab47-607a53240a44}" relid="0x26" childrelidcntr="0x0">
-				<name>Controller3</name>
-				<regnode name="PartRegs" status="undefined">
-					<value></value>
-					<regnode name="Aspect" status="undefined">
-						<value></value>
-						<regnode name="Position" isopaque="yes">
-							<value>308,161</value>
-						</regnode>
-					</regnode>
-				</regnode>
-				<attribute kind="EnableROAsynchronousDelivery" status="meta">
-					<value>true</value>
-				</attribute>
-				<attribute kind="FederateType">
-					<value>2</value>
-				</attribute>
-				<attribute kind="GeneratorClass" status="meta">
-					<value></value>
-				</attribute>
-				<attribute kind="InstantiationScript" status="meta">
-					<value></value>
-				</attribute>
-				<attribute kind="Lookahead" status="meta">
-					<value>0.20000000000000001</value>
-				</attribute>
-				<attribute kind="Meld" status="meta">
-					<value>false</value>
-				</attribute>
-				<attribute kind="Step" status="meta">
-					<value>1</value>
-				</attribute>
-				<attribute kind="TimeConstrained" status="meta">
-					<value>true</value>
-				</attribute>
-				<attribute kind="TimeRegulating" status="meta">
-					<value>true</value>
-				</attribute>
-			</model>
-			<model id="id-0065-00000055" kind="Federate" role="Federate" guid="{85be39d7-ce02-4132-b57e-f0d9372d37a6}" relid="0x27" childrelidcntr="0x0">
-				<name>Controller4</name>
-				<regnode name="PartRegs" status="undefined">
-					<value></value>
-					<regnode name="Aspect" status="undefined">
-						<value></value>
-						<regnode name="Position" isopaque="yes">
-							<value>308,231</value>
 						</regnode>
 					</regnode>
 				</regnode>
@@ -493,46 +376,6 @@
 					</regnode>
 				</regnode>
 			</reference>
-			<connection id="id-0068-00000081" kind="StaticInteractionSubscribe" role="StaticInteractionSubscribe" guid="{efa29b6c-9cb4-4105-9a74-f6fabadae0d8}" relid="0x2a">
-				<name>StaticInteractionSubscribe</name>
-				<regnode name="autorouterPref" isopaque="yes">
-					<value>Ew</value>
-				</regnode>
-				<attribute kind="EnableLogging" status="meta">
-					<value>false</value>
-				</attribute>
-				<attribute kind="LogLevel" status="meta">
-					<value>NORMAL</value>
-				</attribute>
-				<attribute kind="OriginFedFilter" status="meta">
-					<value>BOTH</value>
-				</attribute>
-				<attribute kind="SrcFedFilter" status="meta">
-					<value>MAPPER_FEDERATES</value>
-				</attribute>
-				<connpoint role="dst" target="id-0065-00000053"/>
-				<connpoint role="src" target="id-0067-00000001"/>
-			</connection>
-			<connection id="id-0068-00000083" kind="StaticInteractionSubscribe" role="StaticInteractionSubscribe" guid="{109357cf-0232-4e11-8a9a-97a075d6d3a1}" relid="0x2c">
-				<name>StaticInteractionSubscribe</name>
-				<regnode name="autorouterPref" isopaque="yes">
-					<value>Ew</value>
-				</regnode>
-				<attribute kind="EnableLogging" status="meta">
-					<value>false</value>
-				</attribute>
-				<attribute kind="LogLevel" status="meta">
-					<value>NORMAL</value>
-				</attribute>
-				<attribute kind="OriginFedFilter" status="meta">
-					<value>BOTH</value>
-				</attribute>
-				<attribute kind="SrcFedFilter" status="meta">
-					<value>MAPPER_FEDERATES</value>
-				</attribute>
-				<connpoint role="dst" target="id-0065-00000055"/>
-				<connpoint role="src" target="id-0067-00000001"/>
-			</connection>
 			<connection id="id-0068-00000084" kind="StaticInteractionSubscribe" role="StaticInteractionSubscribe" guid="{c39f76a5-921e-4810-9f64-ad358fc03e5b}" relid="0x2d">
 				<name>StaticInteractionSubscribe</name>
 				<regnode name="autorouterPref" isopaque="yes">
@@ -551,26 +394,6 @@
 					<value>MAPPER_FEDERATES</value>
 				</attribute>
 				<connpoint role="dst" target="id-0065-00000007"/>
-				<connpoint role="src" target="id-0067-00000001"/>
-			</connection>
-			<connection id="id-0068-00000085" kind="StaticInteractionSubscribe" role="StaticInteractionSubscribe" guid="{29a1d5a3-2c2b-4cd2-a386-bc6f82132fee}" relid="0x2e">
-				<name>StaticInteractionSubscribe</name>
-				<regnode name="autorouterPref" isopaque="yes">
-					<value>Ew</value>
-				</regnode>
-				<attribute kind="EnableLogging" status="meta">
-					<value>false</value>
-				</attribute>
-				<attribute kind="LogLevel" status="meta">
-					<value>NORMAL</value>
-				</attribute>
-				<attribute kind="OriginFedFilter" status="meta">
-					<value>BOTH</value>
-				</attribute>
-				<attribute kind="SrcFedFilter" status="meta">
-					<value>MAPPER_FEDERATES</value>
-				</attribute>
-				<connpoint role="dst" target="id-0065-00000054"/>
 				<connpoint role="src" target="id-0067-00000001"/>
 			</connection>
 			<connection id="id-0068-00000086" kind="StaticInteractionPublish" role="StaticInteractionPublish" guid="{ddba8fb5-30b1-46f7-a55b-3bcb6478ce35}" relid="0x2f">
@@ -606,48 +429,6 @@
 				</attribute>
 				<connpoint role="dst" target="id-0065-00000056"/>
 				<connpoint role="src" target="id-0067-00000002"/>
-			</connection>
-			<connection id="id-0068-00000088" kind="StaticInteractionPublish" role="StaticInteractionPublish" guid="{02150784-4bf1-4c9f-add2-cc1ced07de85}" relid="0x31">
-				<name>StaticInteractionPublish</name>
-				<regnode name="autorouterPref" isopaque="yes">
-					<value>Ew</value>
-				</regnode>
-				<attribute kind="EnableLogging" status="meta">
-					<value>false</value>
-				</attribute>
-				<attribute kind="LogLevel" status="meta">
-					<value>NORMAL</value>
-				</attribute>
-				<connpoint role="src" target="id-0065-00000055"/>
-				<connpoint role="dst" target="id-0067-00000002"/>
-			</connection>
-			<connection id="id-0068-00000089" kind="StaticInteractionPublish" role="StaticInteractionPublish" guid="{a13cae3b-7fee-4b2b-bacf-60985d65e0ad}" relid="0x32">
-				<name>StaticInteractionPublish</name>
-				<regnode name="autorouterPref" isopaque="yes">
-					<value>Ew</value>
-				</regnode>
-				<attribute kind="EnableLogging" status="meta">
-					<value>false</value>
-				</attribute>
-				<attribute kind="LogLevel" status="meta">
-					<value>NORMAL</value>
-				</attribute>
-				<connpoint role="src" target="id-0065-00000054"/>
-				<connpoint role="dst" target="id-0067-00000002"/>
-			</connection>
-			<connection id="id-0068-0000008a" kind="StaticInteractionPublish" role="StaticInteractionPublish" guid="{256515cd-ed68-420b-8938-22a640289d54}" relid="0x33">
-				<name>StaticInteractionPublish</name>
-				<regnode name="autorouterPref" isopaque="yes">
-					<value>Ew</value>
-				</regnode>
-				<attribute kind="EnableLogging" status="meta">
-					<value>false</value>
-				</attribute>
-				<attribute kind="LogLevel" status="meta">
-					<value>NORMAL</value>
-				</attribute>
-				<connpoint role="src" target="id-0065-00000053"/>
-				<connpoint role="dst" target="id-0067-00000002"/>
 			</connection>
 			<connection id="id-0068-0000008b" kind="StaticInteractionPublish" role="StaticInteractionPublish" guid="{b16881a8-aa53-40ef-9f38-63bbd60c1be8}" relid="0x34">
 				<name>StaticInteractionPublish</name>
@@ -705,7 +486,7 @@
 					</attribute>
 				</model>
 			</model>
-			<model id="id-0065-00000015" kind="Experiment" role="Experiment" guid="{133bf565-964f-4fe9-932e-4bea9f9c1f1b}" relid="0xb" childrelidcntr="0x3">
+			<model id="id-0065-00000015" kind="Experiment" role="Experiment" guid="{133bf565-964f-4fe9-932e-4bea9f9c1f1b}" relid="0xb" childrelidcntr="0x8">
 				<name>Full</name>
 				<regnode name="PartRegs" status="undefined">
 					<value></value>
@@ -749,6 +530,81 @@
 				<attribute kind="TerminateOnAllCOAsExecuted" status="meta">
 					<value>false</value>
 				</attribute>
+				<reference id="id-0067-00000025" kind="FederateExecution" role="FederateExecution" guid="{635831b2-c237-49ae-8fac-dd3c3c1f44d4}" relid="0x4" referred="id-0065-00000007">
+					<name>Controller1</name>
+					<regnode name="PartRegs" status="undefined">
+						<value></value>
+						<regnode name="Aspect" status="undefined">
+							<value></value>
+							<regnode name="Position" isopaque="yes">
+								<value>161,98</value>
+							</regnode>
+						</regnode>
+					</regnode>
+					<attribute kind="Command" status="meta">
+						<value></value>
+					</attribute>
+				</reference>
+				<reference id="id-0067-00000026" kind="FederateExecution" role="FederateExecution" guid="{a99fce7f-d107-43d1-888e-99536d83a43b}" relid="0x5" referred="id-0065-00000007">
+					<name>Controller2</name>
+					<regnode name="PartRegs" status="undefined">
+						<value></value>
+						<regnode name="Aspect" status="undefined">
+							<value></value>
+							<regnode name="Position" isopaque="yes">
+								<value>161,168</value>
+							</regnode>
+						</regnode>
+					</regnode>
+					<attribute kind="Command" status="meta">
+						<value></value>
+					</attribute>
+				</reference>
+				<reference id="id-0067-00000027" kind="FederateExecution" role="FederateExecution" guid="{daab4d72-48c0-43d5-aa38-c8614e1c74e9}" relid="0x6" referred="id-0065-00000007">
+					<name>Controller3</name>
+					<regnode name="PartRegs" status="undefined">
+						<value></value>
+						<regnode name="Aspect" status="undefined">
+							<value></value>
+							<regnode name="Position" isopaque="yes">
+								<value>161,238</value>
+							</regnode>
+						</regnode>
+					</regnode>
+					<attribute kind="Command" status="meta">
+						<value></value>
+					</attribute>
+				</reference>
+				<reference id="id-0067-00000028" kind="FederateExecution" role="FederateExecution" guid="{9612be60-4bd2-4a6e-96bf-2912f3aec69b}" relid="0x7" referred="id-0065-00000007">
+					<name>Controller4</name>
+					<regnode name="PartRegs" status="undefined">
+						<value></value>
+						<regnode name="Aspect" status="undefined">
+							<value></value>
+							<regnode name="Position" isopaque="yes">
+								<value>161,308</value>
+							</regnode>
+						</regnode>
+					</regnode>
+					<attribute kind="Command" status="meta">
+						<value></value>
+					</attribute>
+				</reference>
+				<reference id="id-0067-00000029" kind="FederateExecution" role="FederateExecution" guid="{8ca05bc7-b554-4c7e-99f9-89b37e0822f8}" relid="0x8" referred="id-0065-00000056">
+					<name>HILProxy</name>
+					<regnode name="PartRegs" status="undefined">
+						<value></value>
+						<regnode name="Aspect" status="undefined">
+							<value></value>
+							<regnode name="Position" isopaque="yes">
+								<value>364,203</value>
+							</regnode>
+						</regnode>
+					</regnode>
+					<attribute kind="Command" status="meta">
+						<value></value>
+					</attribute>
+				</reference>
 			</model>
 			<model id="id-0065-00000018" kind="Deployment" role="Deployment" guid="{000f1246-360b-401d-bf93-446b212190ef}" relid="0xe" childrelidcntr="0x5">
 				<name>full-Deployment</name>
