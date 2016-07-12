@@ -16,30 +16,30 @@ message Connect {
   repeated Requirement requirements = 3;
 }
 
-message Node {
-  string name = 1;
-  string ip = 2;
-  uint32 port = 3;
+message Response {
+  int64 code = 1;
+  string message = 2;
+  bytes value = 3;
 }
 
-message Flow {
-  Node source = 1;
-  repeated Node destinations = 2;
+message Node {
+  string name = 1;
+  string address = 2;
+}
+
+message Time {
+  double seconds = 1;
 }
 
 message Stream {
-  Flow flow = 1;
+  Node source = 1;
   SensorData data = 2;
+  Time interval = 3;
 }
 
 message Service {
-  Node source = 1;
-  Node destination = 2;
-}
-
-message Header {
-  Node source = 1;
-  Node destination = 2;
+  repeated Node destinations = 1;
+  ActuatorCommand command = 2;
 }
 
 message AbstractData {
