@@ -83,11 +83,52 @@ querying interfaces.
 
 ## HIL Service Design
 
-
+The interface to the HiL service is through ZeroMQ + Protobuf, with the specific message types defined in [service\_interface.proto](./src/hil/proto/service\_interface.proto)
 
 ## HIL Gateway/Proxy Design
 
+The HIL Gateway will take as input at startup a configuration file
+which specifies how it will configure both itself and the HiL Service
+for interfacing with the rest of the federation.  This configuration
+file specifies which data are required from which sensor at what
+rates, which actuators will be controlled and which federates in the
+federation will need to receive the data coming from the HiL. A
+work-in-progress example of the configuration (in JSON) is provided
+below.
 
+```json
+{
+  "connectionData": {
+    "federationName": "<string>",
+	"authData": "<binary encoded string>",
+	"service": {
+	  "name": "<string>",
+	  "address": "<string>"
+	},
+	"requirements": {
+	  "services": [
+	  ],
+	  "streams": [
+	  ]
+	}
+  },
+  "dataMapping": {
+	"streams": {
+	  "<stream name>": {
+	    "interaction": "<interaction name>",
+	    "receivers": [
+		  "<federate name>",
+	    ]
+	  },
+	},
+	"services": {
+	  "<service name>": {
+	    "interaction": "<interaction name>"
+	  },
+	}
+  }
+}
+```
 
 ## Sample Implementation
 
