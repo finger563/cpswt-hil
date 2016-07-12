@@ -5,7 +5,7 @@ message Base {
   bytes messageData = 2;
 }
 
-message Requirement {
+message Requirements {
   repeated Service services = 1;
   repeated Stream streams = 2;
 }
@@ -13,7 +13,7 @@ message Requirement {
 message Connect {
   string federationName = 1;
   bytes authData = 2;
-  repeated Requirement requirements = 3;
+  Requirements requirements = 3;
 }
 
 message Response {
@@ -31,17 +31,6 @@ message Time {
   double seconds = 1;
 }
 
-message Stream {
-  Node source = 1;
-  SensorData data = 2;
-  Time interval = 3;
-}
-
-message Service {
-  repeated Node destinations = 1;
-  ActuatorCommand command = 2;
-}
-
 message AbstractData {
   string name = 1;
   string type = 2;
@@ -52,6 +41,17 @@ message SensorData {
   AbstractData data = 1;
 }
 
+message Stream {
+  Node source = 1;
+  SensorData data = 2;
+  Time interval = 3;
+}
+
 message ActuatorCommand {
   AbstractData data = 1;
+}
+
+message Service {
+  repeated Node destinations = 1;
+  ActuatorCommand command = 2;
 }
