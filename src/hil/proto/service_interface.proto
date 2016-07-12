@@ -1,0 +1,25 @@
+message Base {
+  string messageType = 1;
+  bytes messageData = 2;
+}
+
+message Node {
+  string name = 1;
+  string ip = 2;
+  uint32 port = 3;
+}
+
+message Source {
+};
+
+message Destination {
+}
+
+message Header {
+  Source source = 1;
+  Destination destination = 2;
+}
+
+message SensorData {
+}
+

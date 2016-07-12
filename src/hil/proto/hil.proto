@@ -1,0 +1,9 @@
+message E3SensorData {
+  string sensorName = 1;
+  uint64 numVehiclesPresent = 2;
+}
+
+message TrafficLightState {
+  string trafficLightName = 1;
+  string state = 2;
+}
