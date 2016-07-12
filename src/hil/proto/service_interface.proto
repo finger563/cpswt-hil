@@ -15,6 +15,15 @@ message Source {
 message Destination {
 }
 
+message Flow {
+}
+
+message Stream {
+}
+
+message Service {
+}
+
 message Header {
   Source source = 1;
   Destination destination = 2;
@@ -23,3 +32,5 @@ message Header {
 message SensorData {
 }
 
+message ActuatorCommand {
+}
