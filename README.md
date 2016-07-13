@@ -130,6 +130,29 @@ below.
 }
 ```
 
+When the HiL proxy federate receives an interaction to send to the
+HiL, it merely looks up how to format the message properly and then
+sends the message off to the HiL service process which will forward it
+to the proper HiL nodes. _We do need to work out exactly how the user
+should know about the nodes in the HiL system!_ Similarly, when it
+receives a SensorData message from the HiL service, it will look up
+which federates are currently interested in that data and will then
+create interactions to be sent to those federates. _We do need to get
+the code for sending an interaction specifically to a federate!_
+
+Do we need to support dynamic (de-)registration for the federates
+w.r.t. HiL?  I.e. should federates be able to tell the HiL proxy
+federate during simulation that they are now interested in new sensor
+data or that they are no longer interested in a specific sensor data
+stream?
+
+What exactly are the development requirements for the HiL proxy
+federate and what are the interactions that it supports? We have no
+real way of modeling the ATP messages, so the conversion from
+interaction message to ATP message and back will require filling in
+some stubs. This means that the proxy federate will need to be
+developed custom (at least in part) for each HiL
+
 ## Sample Implementation
 
 The sample implementation for this HiL service / proxy will be
