@@ -144,14 +144,20 @@ Do we need to support dynamic (de-)registration for the federates
 w.r.t. HiL?  I.e. should federates be able to tell the HiL proxy
 federate during simulation that they are now interested in new sensor
 data or that they are no longer interested in a specific sensor data
-stream?
+stream? Ideally they would not do this since to them, they should just
+be seeing a sensor stream and processing it as they see fit. The
+connection management code is not currently part of HLA interaction
+patterns and as such this connection management should not be added.
 
 What exactly are the development requirements for the HiL proxy
 federate and what are the interactions that it supports? We have no
 real way of modeling the ATP messages, so the conversion from
 interaction message to ATP message and back will require filling in
 some stubs. This means that the proxy federate will need to be
-developed custom (at least in part) for each HiL
+developed custom (at least in part) for each HiL.  In the case of HiL
+Service <--> HiL Proxy Federate communication which uses HLA, this
+will be automatic, but since we cannot always support this, we must be
+able to handle both cases, and show how they work.
 
 ## Sample Implementation
 
