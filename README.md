@@ -103,6 +103,105 @@ The interface to the HiL service is through ZeroMQ + Protobuf, with
 the specific message types defined in
 [service\_interface.proto](./src/hil/proto/service\_interface.proto)
 
+This proto file is replicated below for ease of reading:
+
+```c++
+syntax = "proto3";
+
+// This is the base message through which all other messages will be
+// sent and decoded.  MessageType will be string name of the message,
+// e.g. "Connect" or "SensorData", so that the receiving code can
+// handle de-serialization properly.
+message Base {
+  string messageType = 1;
+  bytes messageData = 2;
+}
+
+// These encode the required connections (bi-directional), including
+// streams and services
+message Requirements {
+  repeated Service services = 1;
+  repeated Stream streams = 2;
+}
+
+// This message is used by the Proxy Federate to establish a
+// connection with the HiL service.  The service will return a
+// Response message with status depending on if 1) the federate is
+// allowed to connect, 2) the HiL has the resources for the
+// connection, and 3) if the requirements for the connection can be
+// met.
+message Connect {
+  string federationName = 1;
+  bytes authData = 2;
+  Requirements requirements = 3;
+}
+
+// This is the response that will be sent for any interactions (such
+// as connection registration).  This allows complex data to be
+// returned and encoded in such a way as to make sense in context.
+message Response {
+  int64 code = 1;
+  string message = 2;
+  bytes value = 3;
+}
+
+// Address is left as a string to support any type of HiL addressing
+// implementation including bus-based addressing (e.g. I2C, USART,
+// CAN, etc.)
+message Node {
+  string name = 1;
+  string address = 2;
+}
+
+// We are encoding time as a double
+message Time {
+  double seconds = 1;
+}
+
+// Interface for sending arbitrary network packets onto the HiL
+// network
+message NetworkPacket {
+  repeated Nodes destinations = 1;
+  bytes data = 2;
+}
+
+// Abstract data representation which has binary bytes field for the
+// data and a string type representation.  Name is useful for
+// delineating between two streams of the same type for instance.
+message AbstractData {
+  string name = 1;
+  string type = 2;
+  bytes data = 3;
+}
+
+// Sensor data is simply abstract data
+message SensorData {
+  AbstractData data = 1;
+}
+
+// A stream object is a configuration object for sensor data streams
+// and therefore specifies the source node of the data as well as the
+// periodicity of the data stream.
+message Stream {
+  Node source = 1;
+  SensorData data = 2;
+  Time interval = 3;
+}
+
+// Actuator command is a convenience object for specifying data input
+// to an actuator
+message ActuatorCommand {
+  AbstractData data = 1;
+}
+
+// Services provide an interface to send actuator control command to a
+// set of actuators.
+message Service {
+  repeated Node destinations = 1;
+  ActuatorCommand command = 2;
+}
+```
+
 ## HIL Gateway/Proxy Design
 
 The HIL Gateway will take as input at startup a configuration file

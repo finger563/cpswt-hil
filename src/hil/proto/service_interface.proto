@@ -50,6 +50,13 @@ message Time {
   double seconds = 1;
 }
 
+// Interface for sending arbitrary network packets onto the HiL
+// network
+message NetworkPacket {
+  repeated Nodes destinations = 1;
+  bytes data = 2;
+}
+
 // Abstract data representation which has binary bytes field for the
 // data and a string type representation.  Name is useful for
 // delineating between two streams of the same type for instance.
