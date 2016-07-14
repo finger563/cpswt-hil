@@ -42,9 +42,15 @@ Federates in a federation need to be able to:
 
 * Run-Time:
   * Get sensor data from the HiL
+  * Send sensor data to the HiL
   * Send actuator commands to the HiL
-  * Configure HiL controllers that exist (possibly, not required)
-  * Send a generic ATP-formatted message (needed?)
+  * Get actuator commannds from the HiL
+  * Receive / re-route packets that were on the HiL network, allows for:
+    * Data modification
+	* Network simulation?
+  * Send a generic ATP-formatted message, allows for:
+    * Sending data to a controller
+	* Injecting packets onto the network for an attack
 * Start-Up:
   * Connection establishment (federation name, security, availability)
   * Requirements specification (what the federation needs from the HiL)
