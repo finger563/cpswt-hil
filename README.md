@@ -83,7 +83,19 @@ querying interfaces.
 
 ## HIL Service Design
 
-The interface to the HiL service is through ZeroMQ + Protobuf, with the specific message types defined in [service\_interface.proto](./src/hil/proto/service\_interface.proto)
+The HiL Service provides access to HiL devices which may otherwise be
+inaccessible. Additionally, it provides access control and data
+aggregation facilities which enable the HiL to (if allowed by the HiL
+maintainers) communicate with multiple federations at once. Another
+goal of the HiL Service is to allow for discovery and enumeration of
+the HiL system and its capabilites that are available, enabling the
+HiL proxy federate to gracefully handle errors arising from when the
+HiL services that its federation requires are not completely
+available.
+
+The interface to the HiL service is through ZeroMQ + Protobuf, with
+the specific message types defined in
+[service\_interface.proto](./src/hil/proto/service\_interface.proto)
 
 ## HIL Gateway/Proxy Design
 
