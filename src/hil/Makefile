@@ -14,11 +14,11 @@ all:
 	protoc --cpp_out=. $(TEST_PROTO_DIR)/service_interface.proto
 	protoc --cpp_out=. $(TEST_PROTO_DIR)/hil.proto
 
-	g++ -fPIC -shared $(TEST_SOURCE_DIR)/sensor.cpp -o $(TEST_BUILD_DIR)/sensor.so -I$(TEST_INCLUDE_DIR) -I$(TEST_PROTO_DIR) -std=c++11 -pthread -I$(ZCM_HEADERS) -L$(ZCM_LIBRARY) -lzcm -lzmq -lboost_filesystem -lprotobuf
+	g++ -fPIC -shared $(TEST_SOURCE_DIR)/sensor.cpp $(TEST_PROTO_DIR)/hil.pb.cc -o $(TEST_BUILD_DIR)/sensor.so -I$(TEST_INCLUDE_DIR) -I. -std=c++11 -pthread -I$(ZCM_HEADERS) -L$(ZCM_LIBRARY) -lzcm -lzmq -lboost_filesystem -lprotobuf
 
-	g++ -fPIC -shared $(TEST_SOURCE_DIR)/actuator.cpp -o $(TEST_BUILD_DIR)/actuator.so -I$(TEST_INCLUDE_DIR) -I$(TEST_PROTO_DIR) -std=c++11 -pthread -I$(ZCM_HEADERS) -L$(ZCM_LIBRARY) -lzcm -lzmq -lboost_filesystem -lprotobuf
+	g++ -fPIC -shared $(TEST_SOURCE_DIR)/actuator.cpp $(TEST_PROTO_DIR)/hil.pb.cc -o $(TEST_BUILD_DIR)/actuator.so -I$(TEST_INCLUDE_DIR) -I. -std=c++11 -pthread -I$(ZCM_HEADERS) -L$(ZCM_LIBRARY) -lzcm -lzmq -lboost_filesystem -lprotobuf
 
-	g++ -fPIC -shared $(TEST_SOURCE_DIR)/proxy.cpp -o $(TEST_BUILD_DIR)/proxy.so -I$(TEST_INCLUDE_DIR) -I$(TEST_PROTO_DIR) -std=c++11 -pthread -I$(ZCM_HEADERS) -L$(ZCM_LIBRARY) -lzcm -lzmq -lboost_filesystem -lprotobuf
+	g++ -fPIC -shared $(TEST_SOURCE_DIR)/proxy.cpp $(TEST_PROTO_DIR)/hil.pb.cc $(TEST_PROTO_DIR)/service_interface.pb.cc -o $(TEST_BUILD_DIR)/proxy.so -I$(TEST_INCLUDE_DIR) -I. -std=c++11 -pthread -I$(ZCM_HEADERS) -L$(ZCM_LIBRARY) -lzcm -lzmq -lboost_filesystem -lprotobuf
 
 	g++ $(TEST_SOURCE_DIR)/main.cpp -o $(TEST_BUILD_DIR)/actor -I$(TEST_INCLUDE_DIR) -std=c++11 -ldl -pthread -I$(ZCM_HEADERS) -L$(ZCM_LIBRARY) -lzcm -lzmq
 

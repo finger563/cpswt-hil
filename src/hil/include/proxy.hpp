@@ -37,6 +37,8 @@ namespace zcm {
     void sensor_sub_function();
 
   private:
+    std::map<std::string, int> sensorMap;
+    std::map<std::string, std::string> stateMap;
   };
 }
 

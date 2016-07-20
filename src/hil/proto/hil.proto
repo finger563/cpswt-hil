@@ -1,11 +1,11 @@
 syntax = "proto3";
 
 message E3SensorData {
-  string sensorName = 1;
-  uint64 numVehiclesPresent = 2;
+  string sensor_name = 1;
+  uint64 num_vehicles = 2;
 }
 
 message TrafficLightState {
-  string trafficLightName = 1;
+  string traffic_light_name = 1;
   string state = 2;
 }

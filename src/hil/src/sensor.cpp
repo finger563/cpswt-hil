@@ -6,6 +6,8 @@
 
 #include "sensor.hpp"
 
+#include "proto/hil.pb.h"
+
 namespace zcm {
 
   /**
@@ -32,10 +34,14 @@ namespace zcm {
    * Bind this operation to a periodic timer in the JSON configuration
    */     
   void sensor::timer_function() {
-    int numCars = 0;
     try 
       {
-	publisher("sensor_pub")->send(std::to_string(numCars));
+	E3SensorData sensorData;
+	sensorData.set_sensor_name(name);
+	sensorData.set_num_vehicles(numCars);
+	std::string sensorString;
+	sensorData.SerializeToString(&sensorString);
+	publisher("sensor_pub")->send(sensorString);
       }
     catch (const std::exception &e)
       {

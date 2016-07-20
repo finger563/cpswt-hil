@@ -5,6 +5,8 @@
  */
 #include "actuator.hpp"
 
+#include "proto/hil.pb.h"
+
 namespace zcm {
 
   /**
@@ -31,15 +33,23 @@ namespace zcm {
    * @brief A timer operation
    */     
   void actuator::timer_function() {
-    publisher("state_pub")->send(state);
+    TrafficLightState stateData;
+    stateData.set_traffic_light_name(name);
+    stateData.set_state(state);
+    std::string stateString;
+    stateData.SerializeToString(&stateString);
+    publisher("state_pub")->send(stateString);
   }
 
   /**
    * @brief Subscriber operation for sensor 1 data
    */     
   void actuator::state_sub_operation() {
-    std::string received_message = subscriber("state_sub")->message();
-    state = received_message;
+    std::string receivedMessage = subscriber("state_sub")->message();
+    TrafficLightState stateData;
+    stateData.ParseFromString(receivedMessage);
+    if (stateData.traffic_light_name() == name)
+      state = stateData.state();
   }    
 
 }

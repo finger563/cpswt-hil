@@ -6,6 +6,9 @@
 
 #include "proxy.hpp"
 
+#include "proto/hil.pb.h"
+#include "proto/service_interface.pb.h"
+
 namespace zcm {
 
   /**
@@ -42,13 +45,21 @@ namespace zcm {
    * @brief Function for receiving HiL sensor data
    */     
   void proxy::sensor_sub_function() {
-    std::string received_message = subscriber("sensor_sub")->message();
+    std::string receivedMessage = subscriber("sensor_sub")->message();
+    E3SensorData sensorData;
+    sensorData.ParseFromString(receivedMessage);
+    std::cout << "Received sensor data from: " << sensorData.sensor_name() << std::endl;
+    sensorMap[sensorData.sensor_name()] = sensorData.num_vehicles();
   }    
 
   /**
    * @brief Function for receiving HiL traffic light state data
    */     
   void proxy::state_sub_function() {
-    std::string received_message = subscriber("state_sub")->message();
+    std::string receivedMessage = subscriber("state_sub")->message();
+    TrafficLightState stateData;
+    stateData.ParseFromString(receivedMessage);
+    std::cout << "Received state data from: " << stateData.traffic_light_name() << std::endl;
+    stateMap[stateData.traffic_light_name()] = stateData.state();
   }    
 }

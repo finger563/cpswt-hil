@@ -99,30 +99,30 @@ class E3SensorData : public ::google::protobuf::Message /* @@protoc_insertion_po
 
   // accessors -------------------------------------------------------
 
-  // optional string sensorName = 1;
-  void clear_sensorname();
+  // optional string sensor_name = 1;
+  void clear_sensor_name();
   static const int kSensorNameFieldNumber = 1;
-  const ::std::string& sensorname() const;
-  void set_sensorname(const ::std::string& value);
-  void set_sensorname(const char* value);
-  void set_sensorname(const char* value, size_t size);
-  ::std::string* mutable_sensorname();
-  ::std::string* release_sensorname();
-  void set_allocated_sensorname(::std::string* sensorname);
+  const ::std::string& sensor_name() const;
+  void set_sensor_name(const ::std::string& value);
+  void set_sensor_name(const char* value);
+  void set_sensor_name(const char* value, size_t size);
+  ::std::string* mutable_sensor_name();
+  ::std::string* release_sensor_name();
+  void set_allocated_sensor_name(::std::string* sensor_name);
 
-  // optional uint64 numVehiclesPresent = 2;
-  void clear_numvehiclespresent();
-  static const int kNumVehiclesPresentFieldNumber = 2;
-  ::google::protobuf::uint64 numvehiclespresent() const;
-  void set_numvehiclespresent(::google::protobuf::uint64 value);
+  // optional uint64 num_vehicles = 2;
+  void clear_num_vehicles();
+  static const int kNumVehiclesFieldNumber = 2;
+  ::google::protobuf::uint64 num_vehicles() const;
+  void set_num_vehicles(::google::protobuf::uint64 value);
 
   // @@protoc_insertion_point(class_scope:E3SensorData)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   bool _is_default_instance_;
-  ::google::protobuf::internal::ArenaStringPtr sensorname_;
-  ::google::protobuf::uint64 numvehiclespresent_;
+  ::google::protobuf::internal::ArenaStringPtr sensor_name_;
+  ::google::protobuf::uint64 num_vehicles_;
   mutable int _cached_size_;
   friend void  protobuf_AddDesc_proto_2fhil_2eproto();
   friend void protobuf_AssignDesc_proto_2fhil_2eproto();
@@ -193,16 +193,16 @@ class TrafficLightState : public ::google::protobuf::Message /* @@protoc_inserti
 
   // accessors -------------------------------------------------------
 
-  // optional string trafficLightName = 1;
-  void clear_trafficlightname();
+  // optional string traffic_light_name = 1;
+  void clear_traffic_light_name();
   static const int kTrafficLightNameFieldNumber = 1;
-  const ::std::string& trafficlightname() const;
-  void set_trafficlightname(const ::std::string& value);
-  void set_trafficlightname(const char* value);
-  void set_trafficlightname(const char* value, size_t size);
-  ::std::string* mutable_trafficlightname();
-  ::std::string* release_trafficlightname();
-  void set_allocated_trafficlightname(::std::string* trafficlightname);
+  const ::std::string& traffic_light_name() const;
+  void set_traffic_light_name(const ::std::string& value);
+  void set_traffic_light_name(const char* value);
+  void set_traffic_light_name(const char* value, size_t size);
+  ::std::string* mutable_traffic_light_name();
+  ::std::string* release_traffic_light_name();
+  void set_allocated_traffic_light_name(::std::string* traffic_light_name);
 
   // optional string state = 2;
   void clear_state();
@@ -220,7 +220,7 @@ class TrafficLightState : public ::google::protobuf::Message /* @@protoc_inserti
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   bool _is_default_instance_;
-  ::google::protobuf::internal::ArenaStringPtr trafficlightname_;
+  ::google::protobuf::internal::ArenaStringPtr traffic_light_name_;
   ::google::protobuf::internal::ArenaStringPtr state_;
   mutable int _cached_size_;
   friend void  protobuf_AddDesc_proto_2fhil_2eproto();
@@ -238,110 +238,110 @@ class TrafficLightState : public ::google::protobuf::Message /* @@protoc_inserti
 #if !PROTOBUF_INLINE_NOT_IN_HEADERS
 // E3SensorData
 
-// optional string sensorName = 1;
-inline void E3SensorData::clear_sensorname() {
-  sensorname_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+// optional string sensor_name = 1;
+inline void E3SensorData::clear_sensor_name() {
+  sensor_name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline const ::std::string& E3SensorData::sensorname() const {
-  // @@protoc_insertion_point(field_get:E3SensorData.sensorName)
-  return sensorname_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline const ::std::string& E3SensorData::sensor_name() const {
+  // @@protoc_insertion_point(field_get:E3SensorData.sensor_name)
+  return sensor_name_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void E3SensorData::set_sensorname(const ::std::string& value) {
+inline void E3SensorData::set_sensor_name(const ::std::string& value) {
   
-  sensorname_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:E3SensorData.sensorName)
+  sensor_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:E3SensorData.sensor_name)
 }
-inline void E3SensorData::set_sensorname(const char* value) {
+inline void E3SensorData::set_sensor_name(const char* value) {
   
-  sensorname_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:E3SensorData.sensorName)
+  sensor_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:E3SensorData.sensor_name)
 }
-inline void E3SensorData::set_sensorname(const char* value, size_t size) {
+inline void E3SensorData::set_sensor_name(const char* value, size_t size) {
   
-  sensorname_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+  sensor_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:E3SensorData.sensorName)
+  // @@protoc_insertion_point(field_set_pointer:E3SensorData.sensor_name)
 }
-inline ::std::string* E3SensorData::mutable_sensorname() {
+inline ::std::string* E3SensorData::mutable_sensor_name() {
   
-  // @@protoc_insertion_point(field_mutable:E3SensorData.sensorName)
-  return sensorname_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  // @@protoc_insertion_point(field_mutable:E3SensorData.sensor_name)
+  return sensor_name_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline ::std::string* E3SensorData::release_sensorname() {
-  // @@protoc_insertion_point(field_release:E3SensorData.sensorName)
+inline ::std::string* E3SensorData::release_sensor_name() {
+  // @@protoc_insertion_point(field_release:E3SensorData.sensor_name)
   
-  return sensorname_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return sensor_name_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void E3SensorData::set_allocated_sensorname(::std::string* sensorname) {
-  if (sensorname != NULL) {
+inline void E3SensorData::set_allocated_sensor_name(::std::string* sensor_name) {
+  if (sensor_name != NULL) {
     
   } else {
     
   }
-  sensorname_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), sensorname);
-  // @@protoc_insertion_point(field_set_allocated:E3SensorData.sensorName)
+  sensor_name_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), sensor_name);
+  // @@protoc_insertion_point(field_set_allocated:E3SensorData.sensor_name)
 }
 
-// optional uint64 numVehiclesPresent = 2;
-inline void E3SensorData::clear_numvehiclespresent() {
-  numvehiclespresent_ = GOOGLE_ULONGLONG(0);
+// optional uint64 num_vehicles = 2;
+inline void E3SensorData::clear_num_vehicles() {
+  num_vehicles_ = GOOGLE_ULONGLONG(0);
 }
-inline ::google::protobuf::uint64 E3SensorData::numvehiclespresent() const {
-  // @@protoc_insertion_point(field_get:E3SensorData.numVehiclesPresent)
-  return numvehiclespresent_;
+inline ::google::protobuf::uint64 E3SensorData::num_vehicles() const {
+  // @@protoc_insertion_point(field_get:E3SensorData.num_vehicles)
+  return num_vehicles_;
 }
-inline void E3SensorData::set_numvehiclespresent(::google::protobuf::uint64 value) {
+inline void E3SensorData::set_num_vehicles(::google::protobuf::uint64 value) {
   
-  numvehiclespresent_ = value;
-  // @@protoc_insertion_point(field_set:E3SensorData.numVehiclesPresent)
+  num_vehicles_ = value;
+  // @@protoc_insertion_point(field_set:E3SensorData.num_vehicles)
 }
 
 // -------------------------------------------------------------------
 
 // TrafficLightState
 
-// optional string trafficLightName = 1;
-inline void TrafficLightState::clear_trafficlightname() {
-  trafficlightname_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+// optional string traffic_light_name = 1;
+inline void TrafficLightState::clear_traffic_light_name() {
+  traffic_light_name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline const ::std::string& TrafficLightState::trafficlightname() const {
-  // @@protoc_insertion_point(field_get:TrafficLightState.trafficLightName)
-  return trafficlightname_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline const ::std::string& TrafficLightState::traffic_light_name() const {
+  // @@protoc_insertion_point(field_get:TrafficLightState.traffic_light_name)
+  return traffic_light_name_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void TrafficLightState::set_trafficlightname(const ::std::string& value) {
+inline void TrafficLightState::set_traffic_light_name(const ::std::string& value) {
   
-  trafficlightname_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:TrafficLightState.trafficLightName)
+  traffic_light_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:TrafficLightState.traffic_light_name)
 }
-inline void TrafficLightState::set_trafficlightname(const char* value) {
+inline void TrafficLightState::set_traffic_light_name(const char* value) {
   
-  trafficlightname_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:TrafficLightState.trafficLightName)
+  traffic_light_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:TrafficLightState.traffic_light_name)
 }
-inline void TrafficLightState::set_trafficlightname(const char* value, size_t size) {
+inline void TrafficLightState::set_traffic_light_name(const char* value, size_t size) {
   
-  trafficlightname_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+  traffic_light_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:TrafficLightState.trafficLightName)
+  // @@protoc_insertion_point(field_set_pointer:TrafficLightState.traffic_light_name)
 }
-inline ::std::string* TrafficLightState::mutable_trafficlightname() {
+inline ::std::string* TrafficLightState::mutable_traffic_light_name() {
   
-  // @@protoc_insertion_point(field_mutable:TrafficLightState.trafficLightName)
-  return trafficlightname_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  // @@protoc_insertion_point(field_mutable:TrafficLightState.traffic_light_name)
+  return traffic_light_name_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline ::std::string* TrafficLightState::release_trafficlightname() {
-  // @@protoc_insertion_point(field_release:TrafficLightState.trafficLightName)
+inline ::std::string* TrafficLightState::release_traffic_light_name() {
+  // @@protoc_insertion_point(field_release:TrafficLightState.traffic_light_name)
   
-  return trafficlightname_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return traffic_light_name_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void TrafficLightState::set_allocated_trafficlightname(::std::string* trafficlightname) {
-  if (trafficlightname != NULL) {
+inline void TrafficLightState::set_allocated_traffic_light_name(::std::string* traffic_light_name) {
+  if (traffic_light_name != NULL) {
     
   } else {
     
   }
-  trafficlightname_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), trafficlightname);
-  // @@protoc_insertion_point(field_set_allocated:TrafficLightState.trafficLightName)
+  traffic_light_name_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), traffic_light_name);
+  // @@protoc_insertion_point(field_set_allocated:TrafficLightState.traffic_light_name)
 }
 
 // optional string state = 2;

@@ -28,6 +28,9 @@ namespace zcm {
      * @brief A timer operation that can be triggered by some periodic timer
      */     
     void timer_function();
+  private:
+    int numCars;
+    std::string name;
   };
 
 }

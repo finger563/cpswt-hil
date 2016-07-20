@@ -33,6 +33,7 @@ namespace zcm {
     void state_sub_operation();
 
   private:
+    std::string name;
     std::string state;
   };
 }

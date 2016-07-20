@@ -37,8 +37,8 @@ void protobuf_AssignDesc_proto_2fhil_2eproto() {
   GOOGLE_CHECK(file != NULL);
   E3SensorData_descriptor_ = file->message_type(0);
   static const int E3SensorData_offsets_[2] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(E3SensorData, sensorname_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(E3SensorData, numvehiclespresent_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(E3SensorData, sensor_name_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(E3SensorData, num_vehicles_),
   };
   E3SensorData_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
@@ -53,7 +53,7 @@ void protobuf_AssignDesc_proto_2fhil_2eproto() {
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(E3SensorData, _is_default_instance_));
   TrafficLightState_descriptor_ = file->message_type(1);
   static const int TrafficLightState_offsets_[2] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TrafficLightState, trafficlightname_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TrafficLightState, traffic_light_name_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(TrafficLightState, state_),
   };
   TrafficLightState_reflection_ =
@@ -101,10 +101,10 @@ void protobuf_AddDesc_proto_2fhil_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-    "\n\017proto/hil.proto\">\n\014E3SensorData\022\022\n\nsen"
-    "sorName\030\001 \001(\t\022\032\n\022numVehiclesPresent\030\002 \001("
-    "\004\"<\n\021TrafficLightState\022\030\n\020trafficLightNa"
-    "me\030\001 \001(\t\022\r\n\005state\030\002 \001(\tb\006proto3", 151);
+    "\n\017proto/hil.proto\"9\n\014E3SensorData\022\023\n\013sen"
+    "sor_name\030\001 \001(\t\022\024\n\014num_vehicles\030\002 \001(\004\">\n\021"
+    "TrafficLightState\022\032\n\022traffic_light_name\030"
+    "\001 \001(\t\022\r\n\005state\030\002 \001(\tb\006proto3", 148);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "proto/hil.proto", &protobuf_RegisterTypes);
   E3SensorData::default_instance_ = new E3SensorData();
@@ -135,7 +135,7 @@ static void MergeFromFail(int line) {
 
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int E3SensorData::kSensorNameFieldNumber;
-const int E3SensorData::kNumVehiclesPresentFieldNumber;
+const int E3SensorData::kNumVehiclesFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 E3SensorData::E3SensorData()
@@ -160,8 +160,8 @@ void E3SensorData::SharedCtor() {
     _is_default_instance_ = false;
   ::google::protobuf::internal::GetEmptyString();
   _cached_size_ = 0;
-  sensorname_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  numvehiclespresent_ = GOOGLE_ULONGLONG(0);
+  sensor_name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  num_vehicles_ = GOOGLE_ULONGLONG(0);
 }
 
 E3SensorData::~E3SensorData() {
@@ -170,7 +170,7 @@ E3SensorData::~E3SensorData() {
 }
 
 void E3SensorData::SharedDtor() {
-  sensorname_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  sensor_name_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (this != default_instance_) {
   }
 }
@@ -202,8 +202,8 @@ E3SensorData* E3SensorData::New(::google::protobuf::Arena* arena) const {
 
 void E3SensorData::Clear() {
 // @@protoc_insertion_point(message_clear_start:E3SensorData)
-  sensorname_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  numvehiclespresent_ = GOOGLE_ULONGLONG(0);
+  sensor_name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  num_vehicles_ = GOOGLE_ULONGLONG(0);
 }
 
 bool E3SensorData::MergePartialFromCodedStream(
@@ -216,29 +216,29 @@ bool E3SensorData::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // optional string sensorName = 1;
+      // optional string sensor_name = 1;
       case 1: {
         if (tag == 10) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_sensorname()));
+                input, this->mutable_sensor_name()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->sensorname().data(), this->sensorname().length(),
+            this->sensor_name().data(), this->sensor_name().length(),
             ::google::protobuf::internal::WireFormatLite::PARSE,
-            "E3SensorData.sensorName"));
+            "E3SensorData.sensor_name"));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(16)) goto parse_numVehiclesPresent;
+        if (input->ExpectTag(16)) goto parse_num_vehicles;
         break;
       }
 
-      // optional uint64 numVehiclesPresent = 2;
+      // optional uint64 num_vehicles = 2;
       case 2: {
         if (tag == 16) {
-         parse_numVehiclesPresent:
+         parse_num_vehicles:
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint64, ::google::protobuf::internal::WireFormatLite::TYPE_UINT64>(
-                 input, &numvehiclespresent_)));
+                 input, &num_vehicles_)));
 
         } else {
           goto handle_unusual;
@@ -271,19 +271,19 @@ failure:
 void E3SensorData::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:E3SensorData)
-  // optional string sensorName = 1;
-  if (this->sensorname().size() > 0) {
+  // optional string sensor_name = 1;
+  if (this->sensor_name().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->sensorname().data(), this->sensorname().length(),
+      this->sensor_name().data(), this->sensor_name().length(),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "E3SensorData.sensorName");
+      "E3SensorData.sensor_name");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      1, this->sensorname(), output);
+      1, this->sensor_name(), output);
   }
 
-  // optional uint64 numVehiclesPresent = 2;
-  if (this->numvehiclespresent() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteUInt64(2, this->numvehiclespresent(), output);
+  // optional uint64 num_vehicles = 2;
+  if (this->num_vehicles() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt64(2, this->num_vehicles(), output);
   }
 
   // @@protoc_insertion_point(serialize_end:E3SensorData)
@@ -292,20 +292,20 @@ void E3SensorData::SerializeWithCachedSizes(
 ::google::protobuf::uint8* E3SensorData::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
   // @@protoc_insertion_point(serialize_to_array_start:E3SensorData)
-  // optional string sensorName = 1;
-  if (this->sensorname().size() > 0) {
+  // optional string sensor_name = 1;
+  if (this->sensor_name().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->sensorname().data(), this->sensorname().length(),
+      this->sensor_name().data(), this->sensor_name().length(),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "E3SensorData.sensorName");
+      "E3SensorData.sensor_name");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        1, this->sensorname(), target);
+        1, this->sensor_name(), target);
   }
 
-  // optional uint64 numVehiclesPresent = 2;
-  if (this->numvehiclespresent() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteUInt64ToArray(2, this->numvehiclespresent(), target);
+  // optional uint64 num_vehicles = 2;
+  if (this->num_vehicles() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt64ToArray(2, this->num_vehicles(), target);
   }
 
   // @@protoc_insertion_point(serialize_to_array_end:E3SensorData)
@@ -316,18 +316,18 @@ int E3SensorData::ByteSize() const {
 // @@protoc_insertion_point(message_byte_size_start:E3SensorData)
   int total_size = 0;
 
-  // optional string sensorName = 1;
-  if (this->sensorname().size() > 0) {
+  // optional string sensor_name = 1;
+  if (this->sensor_name().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->sensorname());
+        this->sensor_name());
   }
 
-  // optional uint64 numVehiclesPresent = 2;
-  if (this->numvehiclespresent() != 0) {
+  // optional uint64 num_vehicles = 2;
+  if (this->num_vehicles() != 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::UInt64Size(
-        this->numvehiclespresent());
+        this->num_vehicles());
   }
 
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
@@ -354,12 +354,12 @@ void E3SensorData::MergeFrom(const ::google::protobuf::Message& from) {
 void E3SensorData::MergeFrom(const E3SensorData& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:E3SensorData)
   if (GOOGLE_PREDICT_FALSE(&from == this)) MergeFromFail(__LINE__);
-  if (from.sensorname().size() > 0) {
+  if (from.sensor_name().size() > 0) {
 
-    sensorname_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.sensorname_);
+    sensor_name_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.sensor_name_);
   }
-  if (from.numvehiclespresent() != 0) {
-    set_numvehiclespresent(from.numvehiclespresent());
+  if (from.num_vehicles() != 0) {
+    set_num_vehicles(from.num_vehicles());
   }
 }
 
@@ -387,8 +387,8 @@ void E3SensorData::Swap(E3SensorData* other) {
   InternalSwap(other);
 }
 void E3SensorData::InternalSwap(E3SensorData* other) {
-  sensorname_.Swap(&other->sensorname_);
-  std::swap(numvehiclespresent_, other->numvehiclespresent_);
+  sensor_name_.Swap(&other->sensor_name_);
+  std::swap(num_vehicles_, other->num_vehicles_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   std::swap(_cached_size_, other->_cached_size_);
 }
@@ -404,62 +404,62 @@ void E3SensorData::InternalSwap(E3SensorData* other) {
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
 // E3SensorData
 
-// optional string sensorName = 1;
-void E3SensorData::clear_sensorname() {
-  sensorname_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+// optional string sensor_name = 1;
+void E3SensorData::clear_sensor_name() {
+  sensor_name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- const ::std::string& E3SensorData::sensorname() const {
-  // @@protoc_insertion_point(field_get:E3SensorData.sensorName)
-  return sensorname_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+ const ::std::string& E3SensorData::sensor_name() const {
+  // @@protoc_insertion_point(field_get:E3SensorData.sensor_name)
+  return sensor_name_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void E3SensorData::set_sensorname(const ::std::string& value) {
+ void E3SensorData::set_sensor_name(const ::std::string& value) {
   
-  sensorname_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:E3SensorData.sensorName)
+  sensor_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:E3SensorData.sensor_name)
 }
- void E3SensorData::set_sensorname(const char* value) {
+ void E3SensorData::set_sensor_name(const char* value) {
   
-  sensorname_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:E3SensorData.sensorName)
+  sensor_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:E3SensorData.sensor_name)
 }
- void E3SensorData::set_sensorname(const char* value, size_t size) {
+ void E3SensorData::set_sensor_name(const char* value, size_t size) {
   
-  sensorname_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+  sensor_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:E3SensorData.sensorName)
+  // @@protoc_insertion_point(field_set_pointer:E3SensorData.sensor_name)
 }
- ::std::string* E3SensorData::mutable_sensorname() {
+ ::std::string* E3SensorData::mutable_sensor_name() {
   
-  // @@protoc_insertion_point(field_mutable:E3SensorData.sensorName)
-  return sensorname_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  // @@protoc_insertion_point(field_mutable:E3SensorData.sensor_name)
+  return sensor_name_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- ::std::string* E3SensorData::release_sensorname() {
-  // @@protoc_insertion_point(field_release:E3SensorData.sensorName)
+ ::std::string* E3SensorData::release_sensor_name() {
+  // @@protoc_insertion_point(field_release:E3SensorData.sensor_name)
   
-  return sensorname_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return sensor_name_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void E3SensorData::set_allocated_sensorname(::std::string* sensorname) {
-  if (sensorname != NULL) {
+ void E3SensorData::set_allocated_sensor_name(::std::string* sensor_name) {
+  if (sensor_name != NULL) {
     
   } else {
     
   }
-  sensorname_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), sensorname);
-  // @@protoc_insertion_point(field_set_allocated:E3SensorData.sensorName)
+  sensor_name_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), sensor_name);
+  // @@protoc_insertion_point(field_set_allocated:E3SensorData.sensor_name)
 }
 
-// optional uint64 numVehiclesPresent = 2;
-void E3SensorData::clear_numvehiclespresent() {
-  numvehiclespresent_ = GOOGLE_ULONGLONG(0);
+// optional uint64 num_vehicles = 2;
+void E3SensorData::clear_num_vehicles() {
+  num_vehicles_ = GOOGLE_ULONGLONG(0);
 }
- ::google::protobuf::uint64 E3SensorData::numvehiclespresent() const {
-  // @@protoc_insertion_point(field_get:E3SensorData.numVehiclesPresent)
-  return numvehiclespresent_;
+ ::google::protobuf::uint64 E3SensorData::num_vehicles() const {
+  // @@protoc_insertion_point(field_get:E3SensorData.num_vehicles)
+  return num_vehicles_;
 }
- void E3SensorData::set_numvehiclespresent(::google::protobuf::uint64 value) {
+ void E3SensorData::set_num_vehicles(::google::protobuf::uint64 value) {
   
-  numvehiclespresent_ = value;
-  // @@protoc_insertion_point(field_set:E3SensorData.numVehiclesPresent)
+  num_vehicles_ = value;
+  // @@protoc_insertion_point(field_set:E3SensorData.num_vehicles)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -493,7 +493,7 @@ void TrafficLightState::SharedCtor() {
     _is_default_instance_ = false;
   ::google::protobuf::internal::GetEmptyString();
   _cached_size_ = 0;
-  trafficlightname_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  traffic_light_name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   state_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 
@@ -503,7 +503,7 @@ TrafficLightState::~TrafficLightState() {
 }
 
 void TrafficLightState::SharedDtor() {
-  trafficlightname_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  traffic_light_name_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   state_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (this != default_instance_) {
   }
@@ -536,7 +536,7 @@ TrafficLightState* TrafficLightState::New(::google::protobuf::Arena* arena) cons
 
 void TrafficLightState::Clear() {
 // @@protoc_insertion_point(message_clear_start:TrafficLightState)
-  trafficlightname_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  traffic_light_name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   state_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 
@@ -550,15 +550,15 @@ bool TrafficLightState::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // optional string trafficLightName = 1;
+      // optional string traffic_light_name = 1;
       case 1: {
         if (tag == 10) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_trafficlightname()));
+                input, this->mutable_traffic_light_name()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->trafficlightname().data(), this->trafficlightname().length(),
+            this->traffic_light_name().data(), this->traffic_light_name().length(),
             ::google::protobuf::internal::WireFormatLite::PARSE,
-            "TrafficLightState.trafficLightName"));
+            "TrafficLightState.traffic_light_name"));
         } else {
           goto handle_unusual;
         }
@@ -607,14 +607,14 @@ failure:
 void TrafficLightState::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:TrafficLightState)
-  // optional string trafficLightName = 1;
-  if (this->trafficlightname().size() > 0) {
+  // optional string traffic_light_name = 1;
+  if (this->traffic_light_name().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->trafficlightname().data(), this->trafficlightname().length(),
+      this->traffic_light_name().data(), this->traffic_light_name().length(),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "TrafficLightState.trafficLightName");
+      "TrafficLightState.traffic_light_name");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      1, this->trafficlightname(), output);
+      1, this->traffic_light_name(), output);
   }
 
   // optional string state = 2;
@@ -633,15 +633,15 @@ void TrafficLightState::SerializeWithCachedSizes(
 ::google::protobuf::uint8* TrafficLightState::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
   // @@protoc_insertion_point(serialize_to_array_start:TrafficLightState)
-  // optional string trafficLightName = 1;
-  if (this->trafficlightname().size() > 0) {
+  // optional string traffic_light_name = 1;
+  if (this->traffic_light_name().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->trafficlightname().data(), this->trafficlightname().length(),
+      this->traffic_light_name().data(), this->traffic_light_name().length(),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "TrafficLightState.trafficLightName");
+      "TrafficLightState.traffic_light_name");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        1, this->trafficlightname(), target);
+        1, this->traffic_light_name(), target);
   }
 
   // optional string state = 2;
@@ -663,11 +663,11 @@ int TrafficLightState::ByteSize() const {
 // @@protoc_insertion_point(message_byte_size_start:TrafficLightState)
   int total_size = 0;
 
-  // optional string trafficLightName = 1;
-  if (this->trafficlightname().size() > 0) {
+  // optional string traffic_light_name = 1;
+  if (this->traffic_light_name().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->trafficlightname());
+        this->traffic_light_name());
   }
 
   // optional string state = 2;
@@ -701,9 +701,9 @@ void TrafficLightState::MergeFrom(const ::google::protobuf::Message& from) {
 void TrafficLightState::MergeFrom(const TrafficLightState& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:TrafficLightState)
   if (GOOGLE_PREDICT_FALSE(&from == this)) MergeFromFail(__LINE__);
-  if (from.trafficlightname().size() > 0) {
+  if (from.traffic_light_name().size() > 0) {
 
-    trafficlightname_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.trafficlightname_);
+    traffic_light_name_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.traffic_light_name_);
   }
   if (from.state().size() > 0) {
 
@@ -735,7 +735,7 @@ void TrafficLightState::Swap(TrafficLightState* other) {
   InternalSwap(other);
 }
 void TrafficLightState::InternalSwap(TrafficLightState* other) {
-  trafficlightname_.Swap(&other->trafficlightname_);
+  traffic_light_name_.Swap(&other->traffic_light_name_);
   state_.Swap(&other->state_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   std::swap(_cached_size_, other->_cached_size_);
@@ -752,48 +752,48 @@ void TrafficLightState::InternalSwap(TrafficLightState* other) {
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
 // TrafficLightState
 
-// optional string trafficLightName = 1;
-void TrafficLightState::clear_trafficlightname() {
-  trafficlightname_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+// optional string traffic_light_name = 1;
+void TrafficLightState::clear_traffic_light_name() {
+  traffic_light_name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- const ::std::string& TrafficLightState::trafficlightname() const {
-  // @@protoc_insertion_point(field_get:TrafficLightState.trafficLightName)
-  return trafficlightname_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+ const ::std::string& TrafficLightState::traffic_light_name() const {
+  // @@protoc_insertion_point(field_get:TrafficLightState.traffic_light_name)
+  return traffic_light_name_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void TrafficLightState::set_trafficlightname(const ::std::string& value) {
+ void TrafficLightState::set_traffic_light_name(const ::std::string& value) {
   
-  trafficlightname_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:TrafficLightState.trafficLightName)
+  traffic_light_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:TrafficLightState.traffic_light_name)
 }
- void TrafficLightState::set_trafficlightname(const char* value) {
+ void TrafficLightState::set_traffic_light_name(const char* value) {
   
-  trafficlightname_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:TrafficLightState.trafficLightName)
+  traffic_light_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:TrafficLightState.traffic_light_name)
 }
- void TrafficLightState::set_trafficlightname(const char* value, size_t size) {
+ void TrafficLightState::set_traffic_light_name(const char* value, size_t size) {
   
-  trafficlightname_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+  traffic_light_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:TrafficLightState.trafficLightName)
+  // @@protoc_insertion_point(field_set_pointer:TrafficLightState.traffic_light_name)
 }
- ::std::string* TrafficLightState::mutable_trafficlightname() {
+ ::std::string* TrafficLightState::mutable_traffic_light_name() {
   
-  // @@protoc_insertion_point(field_mutable:TrafficLightState.trafficLightName)
-  return trafficlightname_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  // @@protoc_insertion_point(field_mutable:TrafficLightState.traffic_light_name)
+  return traffic_light_name_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- ::std::string* TrafficLightState::release_trafficlightname() {
-  // @@protoc_insertion_point(field_release:TrafficLightState.trafficLightName)
+ ::std::string* TrafficLightState::release_traffic_light_name() {
+  // @@protoc_insertion_point(field_release:TrafficLightState.traffic_light_name)
   
-  return trafficlightname_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return traffic_light_name_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void TrafficLightState::set_allocated_trafficlightname(::std::string* trafficlightname) {
-  if (trafficlightname != NULL) {
+ void TrafficLightState::set_allocated_traffic_light_name(::std::string* traffic_light_name) {
+  if (traffic_light_name != NULL) {
     
   } else {
     
   }
-  trafficlightname_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), trafficlightname);
-  // @@protoc_insertion_point(field_set_allocated:TrafficLightState.trafficLightName)
+  traffic_light_name_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), traffic_light_name);
+  // @@protoc_insertion_point(field_set_allocated:TrafficLightState.traffic_light_name)
 }
 
 // optional string state = 2;
