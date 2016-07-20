@@ -41,7 +41,7 @@ namespace zcm {
    * @brief Subscriber operation for sensor 1 data
    */     
   void aggregator::sensor_1_sub_operation() {
-    std::string received_message = subscriber("")->message();
+    std::string received_message = subscriber("sensor_1_sub")->message();
     sensor_1 = atoi(received_message.c_str());
   }    
 
@@ -49,7 +49,7 @@ namespace zcm {
    * @brief Subscriber operation for sensor 2 data
    */     
   void aggregator::sensor_2_sub_operation() {
-    std::string received_message = subscriber("")->message();
+    std::string received_message = subscriber("sensor_2_sub")->message();
     sensor_2 = atoi(received_message.c_str());
   }    
 }

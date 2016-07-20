@@ -30,7 +30,7 @@ namespace zcm {
    * @brief A subscriber operation
    */     
   void predictor::subscriber_function() {
-    std::string received_message = subscriber("")->message();
+    std::string received_message = subscriber("aggregated_sub")->message();
     prediction = atoi(received_message.c_str());
     std::cout << "There will be " << prediction << " spaces." << std::endl;
   }    
