@@ -66,29 +66,18 @@ message AbstractData {
   bytes data = 3;
 }
 
-// Sensor data is simply abstract data
-message SensorData {
-  AbstractData data = 1;
-}
-
 // A stream object is a configuration object for sensor data streams
 // and therefore specifies the source node of the data as well as the
 // periodicity of the data stream.
 message Stream {
   Node source = 1;
-  SensorData data = 2;
+  AbstractData data = 2;
   Time interval = 3;
-}
-
-// Actuator command is a convenience object for specifying data input
-// to an actuator
-message ActuatorCommand {
-  AbstractData data = 1;
 }
 
 // Services provide an interface to send actuator control command to a
 // set of actuators.
 message Service {
   repeated Node destinations = 1;
-  ActuatorCommand command = 2;
+  AbstractData command = 2;
 }
