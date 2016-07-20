@@ -21,16 +21,12 @@ namespace zcm {
    * Register all operations exposed by this component
    */    
   aggregator::aggregator() {
-    register_timer_operation("timer_function",
+    register_functionality("timer_function",
 			     std::bind(&aggregator::timer_function, this));
-    register_subscriber_operation("sensor_1_sub_operation",
-				  std::bind(&aggregator::sensor_1_sub_operation, 
-					    this,
-					    std::placeholders::_1));
-    register_subscriber_operation("sensor_2_sub_operation",
-				  std::bind(&aggregator::sensor_2_sub_operation, 
-					    this,
-					    std::placeholders::_1));
+    register_functionality("sensor_1_sub_operation",
+			   std::bind(&aggregator::sensor_1_sub_operation, this));
+    register_functionality("sensor_2_sub_operation",
+			   std::bind(&aggregator::sensor_2_sub_operation, this));
   }
 
   /**
@@ -44,14 +40,16 @@ namespace zcm {
   /**
    * @brief Subscriber operation for sensor 1 data
    */     
-  void aggregator::sensor_1_sub_operation(std::string received_message) {
+  void aggregator::sensor_1_sub_operation() {
+    std::string received_message = subscriber("")->message();
     sensor_1 = atoi(received_message.c_str());
   }    
 
   /**
    * @brief Subscriber operation for sensor 2 data
    */     
-  void aggregator::sensor_2_sub_operation(std::string received_message) {
+  void aggregator::sensor_2_sub_operation() {
+    std::string received_message = subscriber("")->message();
     sensor_2 = atoi(received_message.c_str());
   }    
 }

@@ -161,7 +161,7 @@ message Time {
 // Interface for sending arbitrary network packets onto the HiL
 // network
 message NetworkPacket {
-  repeated Nodes destinations = 1;
+  repeated Node destinations = 1;
   bytes data = 2;
 }
 

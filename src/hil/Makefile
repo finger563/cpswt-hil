@@ -11,10 +11,8 @@ all:
 	mkdir -p $(TEST_BUILD_DIR)
 	cp -r $(TEST_CONFIG_DIR)/* $(TEST_BUILD_DIR)/.
 
-	cd $(TEST_PROTO_DIR)
-	protoc --cpp_out=. service_interface.proto
-	protoc --cpp_out=. hil.proto
-	cd ..
+	protoc --cpp_out=. $(TEST_PROTO_DIR)/service_interface.proto
+	protoc --cpp_out=. $(TEST_PROTO_DIR)/hil.proto
 
 	g++ -fPIC -shared $(TEST_SOURCE_DIR)/sensor_1.cpp -o $(TEST_BUILD_DIR)/sensor_1.so -I$(TEST_INCLUDE_DIR) -I$(TEST_PROTO_DIR) -std=c++11 -pthread -I$(ZCM_HEADERS) -L$(ZCM_LIBRARY) -lzcm -lzmq -lboost_filesystem -lcpprest -lprotobuf
 

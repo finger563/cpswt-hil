@@ -28,8 +28,8 @@ namespace zcm {
    * Register all operations exposed by this component
    */    
   sensor_1::sensor_1() {
-    register_timer_operation("timer_function",
-			     std::bind(&sensor_1::timer_function, this));
+    register_functionality("timer_function",
+			   std::bind(&sensor_1::timer_function, this));
   }
 
   /**
@@ -58,7 +58,7 @@ namespace zcm {
 		return root["value"].asInt();
 	      }
 	    });
-     try 
+    try 
       {
 	requestTask.wait();
 	spaces = requestTask.get();

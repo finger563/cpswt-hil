@@ -29,12 +29,12 @@ namespace zcm {
     /**
      * @brief Function for receiving sensor_1 data
      */         
-    void sensor_1_sub_operation(std::string received_message);
+    void sensor_1_sub_operation();
 
     /**
      * @brief Function for receiving sensor_2 data
      */         
-    void sensor_2_sub_operation(std::string received_message);
+    void sensor_2_sub_operation();
 
   private:
     int aggregate;

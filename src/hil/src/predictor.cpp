@@ -22,16 +22,15 @@ namespace zcm {
    * Register all operations exposed by this component
    */   
   predictor::predictor() {
-    register_subscriber_operation("subscriber_function",
-				  std::bind(&predictor::subscriber_function, 
-					    this,
-					    std::placeholders::_1));
+    register_functionality("subscriber_function",
+			   std::bind(&predictor::subscriber_function, this));
   }
 
   /**
    * @brief A subscriber operation
    */     
-  void predictor::subscriber_function(std::string received_message) {
+  void predictor::subscriber_function() {
+    std::string received_message = subscriber("")->message();
     prediction = atoi(received_message.c_str());
     std::cout << "There will be " << prediction << " spaces." << std::endl;
   }    

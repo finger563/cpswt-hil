@@ -24,7 +24,7 @@ namespace zcm {
     /**
      * @brief Function for receiving aggregated sensor data
      */         
-    void subscriber_function(std::string received_message);
+    void subscriber_function();
 
   private:
     int prediction;

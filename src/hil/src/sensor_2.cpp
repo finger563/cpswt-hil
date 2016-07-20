@@ -28,8 +28,8 @@ namespace zcm {
    * Register all operations exposed by this component
    */    
   sensor_2::sensor_2() {
-    register_timer_operation("timer_function",
-			     std::bind(&sensor_2::timer_function, this));
+    register_functionality("timer_function",
+			   std::bind(&sensor_2::timer_function, this));
   }
 
   /**
