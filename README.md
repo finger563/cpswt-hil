@@ -87,6 +87,14 @@ the proces sees the message.  Keeps the specification simple.
 Most importantly: all interfaces need meaningful errors, esp. the
 querying interfaces.
 
+Finally, we must note that only asynchronous interactions
+(e.g. pub/sub, AMI) of the HiL can be exposed to the federation, since
+the federation only has the capability to interact in an asynchronous
+manner. This is mainly due to the fact that we are wrapping all
+messages and HiL interactions within HLA interactions, so that the
+federates getting data from and sending data to the HiL are merely
+sending/receiving interactions to/from the HiL gateway federate.
+
 ## HIL Service Design
 
 The HiL Service provides access to HiL devices which may otherwise be
