@@ -2,6 +2,7 @@
  *  @author  William Emfinger
  *  @date    2016.07.20
  *  @brief   This file contains definitions of the actuator class
+ *           which interfaces with a traffic light to manage its state
  */
 #include "actuator.hpp"
 
@@ -30,7 +31,7 @@ namespace zcm {
   }
 
   /**
-   * @brief A timer operation
+   * @brief A timer operation for publishing the current state of the traffic light
    */     
   void actuator::timer_function() {
     TrafficLightState stateData;
@@ -42,7 +43,7 @@ namespace zcm {
   }
 
   /**
-   * @brief Subscriber operation for sensor 1 data
+   * @brief Subscriber operation for receiving and setting the traffic light state
    */     
   void actuator::state_sub_operation() {
     std::string receivedMessage = subscriber("state_sub")->message();
