@@ -31,6 +31,8 @@ namespace zcm {
 			   std::bind(&proxy::sensor_sub_function, this));
     register_functionality("state_sub_function",
 			   std::bind(&proxy::state_sub_function, this));
+    register_functionality("interface_sub_function",
+			   std::bind(&proxy::interface_sub_function, this));
   }
 
   /**
@@ -40,6 +42,40 @@ namespace zcm {
     std::string state;
     publisher("state_pub")->send(state);
   }
+
+  /**
+   * @brief Function for receiving interface data from the Federations
+   */     
+  void proxy::interface_sub_function() {
+    std::string receivedMessage = subscriber("interface_sub")->message();
+
+    Base baseData;
+    baseData.ParseFromString(receivedMessage);
+
+    std::string messageType = baseData.message_type();
+    std::cout << "Received message of type: " << messageType << std::endl;
+
+    if (!messageType.compare("Connect")) {
+      Connect connectData;
+      connectData.ParseFromString(baseData.message_data());
+    }
+    else if (!messageType.compare("Stream")) {
+      Stream streamData;
+      streamData.ParseFromString(baseData.message_data());
+    }
+    else if (!messageType.compare("Service")) {
+      Service serviceData;
+      serviceData.ParseFromString(baseData.message_data());
+    }
+    else if (!messageType.compare("NetworkPacket")) {
+      NetworkPacket networkData;
+      networkData.ParseFromString(baseData.message_data());
+    }
+    else if (!messageType.compare("AbstractData")) {
+      AbstractData abstractData;
+      abstractData.ParseFromString(baseData.message_data());
+    }
+  }    
 
   /**
    * @brief Function for receiving HiL sensor data

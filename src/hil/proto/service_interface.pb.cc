@@ -61,8 +61,8 @@ void protobuf_AssignDesc_proto_2fservice_5finterface_2eproto() {
   GOOGLE_CHECK(file != NULL);
   Base_descriptor_ = file->message_type(0);
   static const int Base_offsets_[2] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Base, messagetype_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Base, messagedata_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Base, message_type_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Base, message_data_),
   };
   Base_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
@@ -93,8 +93,8 @@ void protobuf_AssignDesc_proto_2fservice_5finterface_2eproto() {
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Requirements, _is_default_instance_));
   Connect_descriptor_ = file->message_type(2);
   static const int Connect_offsets_[3] = {
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Connect, federationname_),
-    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Connect, authdata_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Connect, federation_name_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Connect, auth_data_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Connect, requirements_),
   };
   Connect_reflection_ =
@@ -288,23 +288,23 @@ void protobuf_AddDesc_proto_2fservice_5finterface_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-    "\n\035proto/service_interface.proto\"0\n\004Base\022"
-    "\023\n\013messageType\030\001 \001(\t\022\023\n\013messageData\030\002 \001("
-    "\014\"D\n\014Requirements\022\032\n\010services\030\001 \003(\0132\010.Se"
-    "rvice\022\030\n\007streams\030\002 \003(\0132\007.Stream\"X\n\007Conne"
-    "ct\022\026\n\016federationName\030\001 \001(\t\022\020\n\010authData\030\002"
-    " \001(\014\022#\n\014requirements\030\003 \001(\0132\r.Requirement"
-    "s\"8\n\010Response\022\014\n\004code\030\001 \001(\003\022\017\n\007message\030\002"
-    " \001(\t\022\r\n\005value\030\003 \001(\014\"%\n\004Node\022\014\n\004name\030\001 \001("
-    "\t\022\017\n\007address\030\002 \001(\t\"\027\n\004Time\022\017\n\007seconds\030\001 "
-    "\001(\001\":\n\rNetworkPacket\022\033\n\014destinations\030\001 \003"
-    "(\0132\005.Node\022\014\n\004data\030\002 \001(\014\"8\n\014AbstractData\022"
-    "\014\n\004name\030\001 \001(\t\022\014\n\004type\030\002 \001(\t\022\014\n\004data\030\003 \001("
-    "\014\"U\n\006Stream\022\025\n\006source\030\001 \001(\0132\005.Node\022\033\n\004da"
-    "ta\030\002 \001(\0132\r.AbstractData\022\027\n\010interval\030\003 \001("
-    "\0132\005.Time\"F\n\007Service\022\033\n\014destinations\030\001 \003("
-    "\0132\005.Node\022\036\n\007command\030\002 \001(\0132\r.AbstractData"
-    "b\006proto3", 648);
+    "\n\035proto/service_interface.proto\"2\n\004Base\022"
+    "\024\n\014message_type\030\001 \001(\t\022\024\n\014message_data\030\002 "
+    "\001(\t\"D\n\014Requirements\022\032\n\010services\030\001 \003(\0132\010."
+    "Service\022\030\n\007streams\030\002 \003(\0132\007.Stream\"Z\n\007Con"
+    "nect\022\027\n\017federation_name\030\001 \001(\t\022\021\n\tauth_da"
+    "ta\030\002 \001(\014\022#\n\014requirements\030\003 \001(\0132\r.Require"
+    "ments\"8\n\010Response\022\014\n\004code\030\001 \001(\003\022\017\n\007messa"
+    "ge\030\002 \001(\t\022\r\n\005value\030\003 \001(\014\"%\n\004Node\022\014\n\004name\030"
+    "\001 \001(\t\022\017\n\007address\030\002 \001(\t\"\027\n\004Time\022\017\n\007second"
+    "s\030\001 \001(\001\":\n\rNetworkPacket\022\033\n\014destinations"
+    "\030\001 \003(\0132\005.Node\022\014\n\004data\030\002 \001(\014\"8\n\014AbstractD"
+    "ata\022\014\n\004name\030\001 \001(\t\022\014\n\004type\030\002 \001(\t\022\014\n\004data\030"
+    "\003 \001(\014\"U\n\006Stream\022\025\n\006source\030\001 \001(\0132\005.Node\022\033"
+    "\n\004data\030\002 \001(\0132\r.AbstractData\022\027\n\010interval\030"
+    "\003 \001(\0132\005.Time\"F\n\007Service\022\033\n\014destinations\030"
+    "\001 \003(\0132\005.Node\022\036\n\007command\030\002 \001(\0132\r.Abstract"
+    "Datab\006proto3", 652);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "proto/service_interface.proto", &protobuf_RegisterTypes);
   Base::default_instance_ = new Base();
@@ -376,8 +376,8 @@ void Base::SharedCtor() {
     _is_default_instance_ = false;
   ::google::protobuf::internal::GetEmptyString();
   _cached_size_ = 0;
-  messagetype_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  messagedata_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  message_type_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  message_data_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 
 Base::~Base() {
@@ -386,8 +386,8 @@ Base::~Base() {
 }
 
 void Base::SharedDtor() {
-  messagetype_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  messagedata_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  message_type_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  message_data_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (this != default_instance_) {
   }
 }
@@ -419,8 +419,8 @@ Base* Base::New(::google::protobuf::Arena* arena) const {
 
 void Base::Clear() {
 // @@protoc_insertion_point(message_clear_start:Base)
-  messagetype_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  messagedata_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  message_type_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  message_data_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 
 bool Base::MergePartialFromCodedStream(
@@ -433,28 +433,32 @@ bool Base::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // optional string messageType = 1;
+      // optional string message_type = 1;
       case 1: {
         if (tag == 10) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_messagetype()));
+                input, this->mutable_message_type()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->messagetype().data(), this->messagetype().length(),
+            this->message_type().data(), this->message_type().length(),
             ::google::protobuf::internal::WireFormatLite::PARSE,
-            "Base.messageType"));
+            "Base.message_type"));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(18)) goto parse_messageData;
+        if (input->ExpectTag(18)) goto parse_message_data;
         break;
       }
 
-      // optional bytes messageData = 2;
+      // optional string message_data = 2;
       case 2: {
         if (tag == 18) {
-         parse_messageData:
-          DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
-                input, this->mutable_messagedata()));
+         parse_message_data:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_message_data()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->message_data().data(), this->message_data().length(),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "Base.message_data"));
         } else {
           goto handle_unusual;
         }
@@ -486,20 +490,24 @@ failure:
 void Base::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:Base)
-  // optional string messageType = 1;
-  if (this->messagetype().size() > 0) {
+  // optional string message_type = 1;
+  if (this->message_type().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->messagetype().data(), this->messagetype().length(),
+      this->message_type().data(), this->message_type().length(),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "Base.messageType");
+      "Base.message_type");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      1, this->messagetype(), output);
+      1, this->message_type(), output);
   }
 
-  // optional bytes messageData = 2;
-  if (this->messagedata().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteBytesMaybeAliased(
-      2, this->messagedata(), output);
+  // optional string message_data = 2;
+  if (this->message_data().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->message_data().data(), this->message_data().length(),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "Base.message_data");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      2, this->message_data(), output);
   }
 
   // @@protoc_insertion_point(serialize_end:Base)
@@ -508,22 +516,26 @@ void Base::SerializeWithCachedSizes(
 ::google::protobuf::uint8* Base::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
   // @@protoc_insertion_point(serialize_to_array_start:Base)
-  // optional string messageType = 1;
-  if (this->messagetype().size() > 0) {
+  // optional string message_type = 1;
+  if (this->message_type().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->messagetype().data(), this->messagetype().length(),
+      this->message_type().data(), this->message_type().length(),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "Base.messageType");
+      "Base.message_type");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        1, this->messagetype(), target);
+        1, this->message_type(), target);
   }
 
-  // optional bytes messageData = 2;
-  if (this->messagedata().size() > 0) {
+  // optional string message_data = 2;
+  if (this->message_data().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->message_data().data(), this->message_data().length(),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "Base.message_data");
     target =
-      ::google::protobuf::internal::WireFormatLite::WriteBytesToArray(
-        2, this->messagedata(), target);
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        2, this->message_data(), target);
   }
 
   // @@protoc_insertion_point(serialize_to_array_end:Base)
@@ -534,18 +546,18 @@ int Base::ByteSize() const {
 // @@protoc_insertion_point(message_byte_size_start:Base)
   int total_size = 0;
 
-  // optional string messageType = 1;
-  if (this->messagetype().size() > 0) {
+  // optional string message_type = 1;
+  if (this->message_type().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->messagetype());
+        this->message_type());
   }
 
-  // optional bytes messageData = 2;
-  if (this->messagedata().size() > 0) {
+  // optional string message_data = 2;
+  if (this->message_data().size() > 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::BytesSize(
-        this->messagedata());
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->message_data());
   }
 
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
@@ -572,13 +584,13 @@ void Base::MergeFrom(const ::google::protobuf::Message& from) {
 void Base::MergeFrom(const Base& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:Base)
   if (GOOGLE_PREDICT_FALSE(&from == this)) MergeFromFail(__LINE__);
-  if (from.messagetype().size() > 0) {
+  if (from.message_type().size() > 0) {
 
-    messagetype_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.messagetype_);
+    message_type_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.message_type_);
   }
-  if (from.messagedata().size() > 0) {
+  if (from.message_data().size() > 0) {
 
-    messagedata_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.messagedata_);
+    message_data_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.message_data_);
   }
 }
 
@@ -606,8 +618,8 @@ void Base::Swap(Base* other) {
   InternalSwap(other);
 }
 void Base::InternalSwap(Base* other) {
-  messagetype_.Swap(&other->messagetype_);
-  messagedata_.Swap(&other->messagedata_);
+  message_type_.Swap(&other->message_type_);
+  message_data_.Swap(&other->message_data_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   std::swap(_cached_size_, other->_cached_size_);
 }
@@ -623,92 +635,92 @@ void Base::InternalSwap(Base* other) {
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
 // Base
 
-// optional string messageType = 1;
-void Base::clear_messagetype() {
-  messagetype_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+// optional string message_type = 1;
+void Base::clear_message_type() {
+  message_type_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- const ::std::string& Base::messagetype() const {
-  // @@protoc_insertion_point(field_get:Base.messageType)
-  return messagetype_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+ const ::std::string& Base::message_type() const {
+  // @@protoc_insertion_point(field_get:Base.message_type)
+  return message_type_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void Base::set_messagetype(const ::std::string& value) {
+ void Base::set_message_type(const ::std::string& value) {
   
-  messagetype_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:Base.messageType)
+  message_type_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:Base.message_type)
 }
- void Base::set_messagetype(const char* value) {
+ void Base::set_message_type(const char* value) {
   
-  messagetype_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:Base.messageType)
+  message_type_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:Base.message_type)
 }
- void Base::set_messagetype(const char* value, size_t size) {
+ void Base::set_message_type(const char* value, size_t size) {
   
-  messagetype_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+  message_type_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:Base.messageType)
+  // @@protoc_insertion_point(field_set_pointer:Base.message_type)
 }
- ::std::string* Base::mutable_messagetype() {
+ ::std::string* Base::mutable_message_type() {
   
-  // @@protoc_insertion_point(field_mutable:Base.messageType)
-  return messagetype_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  // @@protoc_insertion_point(field_mutable:Base.message_type)
+  return message_type_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- ::std::string* Base::release_messagetype() {
-  // @@protoc_insertion_point(field_release:Base.messageType)
+ ::std::string* Base::release_message_type() {
+  // @@protoc_insertion_point(field_release:Base.message_type)
   
-  return messagetype_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return message_type_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void Base::set_allocated_messagetype(::std::string* messagetype) {
-  if (messagetype != NULL) {
+ void Base::set_allocated_message_type(::std::string* message_type) {
+  if (message_type != NULL) {
     
   } else {
     
   }
-  messagetype_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), messagetype);
-  // @@protoc_insertion_point(field_set_allocated:Base.messageType)
+  message_type_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), message_type);
+  // @@protoc_insertion_point(field_set_allocated:Base.message_type)
 }
 
-// optional bytes messageData = 2;
-void Base::clear_messagedata() {
-  messagedata_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+// optional string message_data = 2;
+void Base::clear_message_data() {
+  message_data_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- const ::std::string& Base::messagedata() const {
-  // @@protoc_insertion_point(field_get:Base.messageData)
-  return messagedata_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+ const ::std::string& Base::message_data() const {
+  // @@protoc_insertion_point(field_get:Base.message_data)
+  return message_data_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void Base::set_messagedata(const ::std::string& value) {
+ void Base::set_message_data(const ::std::string& value) {
   
-  messagedata_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:Base.messageData)
+  message_data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:Base.message_data)
 }
- void Base::set_messagedata(const char* value) {
+ void Base::set_message_data(const char* value) {
   
-  messagedata_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:Base.messageData)
+  message_data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:Base.message_data)
 }
- void Base::set_messagedata(const void* value, size_t size) {
+ void Base::set_message_data(const char* value, size_t size) {
   
-  messagedata_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+  message_data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:Base.messageData)
+  // @@protoc_insertion_point(field_set_pointer:Base.message_data)
 }
- ::std::string* Base::mutable_messagedata() {
+ ::std::string* Base::mutable_message_data() {
   
-  // @@protoc_insertion_point(field_mutable:Base.messageData)
-  return messagedata_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  // @@protoc_insertion_point(field_mutable:Base.message_data)
+  return message_data_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- ::std::string* Base::release_messagedata() {
-  // @@protoc_insertion_point(field_release:Base.messageData)
+ ::std::string* Base::release_message_data() {
+  // @@protoc_insertion_point(field_release:Base.message_data)
   
-  return messagedata_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return message_data_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void Base::set_allocated_messagedata(::std::string* messagedata) {
-  if (messagedata != NULL) {
+ void Base::set_allocated_message_data(::std::string* message_data) {
+  if (message_data != NULL) {
     
   } else {
     
   }
-  messagedata_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), messagedata);
-  // @@protoc_insertion_point(field_set_allocated:Base.messageData)
+  message_data_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), message_data);
+  // @@protoc_insertion_point(field_set_allocated:Base.message_data)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS
@@ -1068,8 +1080,8 @@ void Connect::SharedCtor() {
     _is_default_instance_ = false;
   ::google::protobuf::internal::GetEmptyString();
   _cached_size_ = 0;
-  federationname_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  authdata_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  federation_name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  auth_data_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   requirements_ = NULL;
 }
 
@@ -1079,8 +1091,8 @@ Connect::~Connect() {
 }
 
 void Connect::SharedDtor() {
-  federationname_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  authdata_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  federation_name_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  auth_data_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (this != default_instance_) {
     delete requirements_;
   }
@@ -1113,8 +1125,8 @@ Connect* Connect::New(::google::protobuf::Arena* arena) const {
 
 void Connect::Clear() {
 // @@protoc_insertion_point(message_clear_start:Connect)
-  federationname_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  authdata_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  federation_name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  auth_data_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (GetArenaNoVirtual() == NULL && requirements_ != NULL) delete requirements_;
   requirements_ = NULL;
 }
@@ -1129,28 +1141,28 @@ bool Connect::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // optional string federationName = 1;
+      // optional string federation_name = 1;
       case 1: {
         if (tag == 10) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_federationname()));
+                input, this->mutable_federation_name()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->federationname().data(), this->federationname().length(),
+            this->federation_name().data(), this->federation_name().length(),
             ::google::protobuf::internal::WireFormatLite::PARSE,
-            "Connect.federationName"));
+            "Connect.federation_name"));
         } else {
           goto handle_unusual;
         }
-        if (input->ExpectTag(18)) goto parse_authData;
+        if (input->ExpectTag(18)) goto parse_auth_data;
         break;
       }
 
-      // optional bytes authData = 2;
+      // optional bytes auth_data = 2;
       case 2: {
         if (tag == 18) {
-         parse_authData:
+         parse_auth_data:
           DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
-                input, this->mutable_authdata()));
+                input, this->mutable_auth_data()));
         } else {
           goto handle_unusual;
         }
@@ -1195,20 +1207,20 @@ failure:
 void Connect::SerializeWithCachedSizes(
     ::google::protobuf::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:Connect)
-  // optional string federationName = 1;
-  if (this->federationname().size() > 0) {
+  // optional string federation_name = 1;
+  if (this->federation_name().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->federationname().data(), this->federationname().length(),
+      this->federation_name().data(), this->federation_name().length(),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "Connect.federationName");
+      "Connect.federation_name");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      1, this->federationname(), output);
+      1, this->federation_name(), output);
   }
 
-  // optional bytes authData = 2;
-  if (this->authdata().size() > 0) {
+  // optional bytes auth_data = 2;
+  if (this->auth_data().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::WriteBytesMaybeAliased(
-      2, this->authdata(), output);
+      2, this->auth_data(), output);
   }
 
   // optional .Requirements requirements = 3;
@@ -1223,22 +1235,22 @@ void Connect::SerializeWithCachedSizes(
 ::google::protobuf::uint8* Connect::InternalSerializeWithCachedSizesToArray(
     bool deterministic, ::google::protobuf::uint8* target) const {
   // @@protoc_insertion_point(serialize_to_array_start:Connect)
-  // optional string federationName = 1;
-  if (this->federationname().size() > 0) {
+  // optional string federation_name = 1;
+  if (this->federation_name().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->federationname().data(), this->federationname().length(),
+      this->federation_name().data(), this->federation_name().length(),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "Connect.federationName");
+      "Connect.federation_name");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        1, this->federationname(), target);
+        1, this->federation_name(), target);
   }
 
-  // optional bytes authData = 2;
-  if (this->authdata().size() > 0) {
+  // optional bytes auth_data = 2;
+  if (this->auth_data().size() > 0) {
     target =
       ::google::protobuf::internal::WireFormatLite::WriteBytesToArray(
-        2, this->authdata(), target);
+        2, this->auth_data(), target);
   }
 
   // optional .Requirements requirements = 3;
@@ -1256,18 +1268,18 @@ int Connect::ByteSize() const {
 // @@protoc_insertion_point(message_byte_size_start:Connect)
   int total_size = 0;
 
-  // optional string federationName = 1;
-  if (this->federationname().size() > 0) {
+  // optional string federation_name = 1;
+  if (this->federation_name().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->federationname());
+        this->federation_name());
   }
 
-  // optional bytes authData = 2;
-  if (this->authdata().size() > 0) {
+  // optional bytes auth_data = 2;
+  if (this->auth_data().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::BytesSize(
-        this->authdata());
+        this->auth_data());
   }
 
   // optional .Requirements requirements = 3;
@@ -1301,13 +1313,13 @@ void Connect::MergeFrom(const ::google::protobuf::Message& from) {
 void Connect::MergeFrom(const Connect& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:Connect)
   if (GOOGLE_PREDICT_FALSE(&from == this)) MergeFromFail(__LINE__);
-  if (from.federationname().size() > 0) {
+  if (from.federation_name().size() > 0) {
 
-    federationname_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.federationname_);
+    federation_name_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.federation_name_);
   }
-  if (from.authdata().size() > 0) {
+  if (from.auth_data().size() > 0) {
 
-    authdata_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.authdata_);
+    auth_data_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.auth_data_);
   }
   if (from.has_requirements()) {
     mutable_requirements()->::Requirements::MergeFrom(from.requirements());
@@ -1338,8 +1350,8 @@ void Connect::Swap(Connect* other) {
   InternalSwap(other);
 }
 void Connect::InternalSwap(Connect* other) {
-  federationname_.Swap(&other->federationname_);
-  authdata_.Swap(&other->authdata_);
+  federation_name_.Swap(&other->federation_name_);
+  auth_data_.Swap(&other->auth_data_);
   std::swap(requirements_, other->requirements_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   std::swap(_cached_size_, other->_cached_size_);
@@ -1356,92 +1368,92 @@ void Connect::InternalSwap(Connect* other) {
 #if PROTOBUF_INLINE_NOT_IN_HEADERS
 // Connect
 
-// optional string federationName = 1;
-void Connect::clear_federationname() {
-  federationname_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+// optional string federation_name = 1;
+void Connect::clear_federation_name() {
+  federation_name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- const ::std::string& Connect::federationname() const {
-  // @@protoc_insertion_point(field_get:Connect.federationName)
-  return federationname_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+ const ::std::string& Connect::federation_name() const {
+  // @@protoc_insertion_point(field_get:Connect.federation_name)
+  return federation_name_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void Connect::set_federationname(const ::std::string& value) {
+ void Connect::set_federation_name(const ::std::string& value) {
   
-  federationname_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:Connect.federationName)
+  federation_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:Connect.federation_name)
 }
- void Connect::set_federationname(const char* value) {
+ void Connect::set_federation_name(const char* value) {
   
-  federationname_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:Connect.federationName)
+  federation_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:Connect.federation_name)
 }
- void Connect::set_federationname(const char* value, size_t size) {
+ void Connect::set_federation_name(const char* value, size_t size) {
   
-  federationname_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+  federation_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:Connect.federationName)
+  // @@protoc_insertion_point(field_set_pointer:Connect.federation_name)
 }
- ::std::string* Connect::mutable_federationname() {
+ ::std::string* Connect::mutable_federation_name() {
   
-  // @@protoc_insertion_point(field_mutable:Connect.federationName)
-  return federationname_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  // @@protoc_insertion_point(field_mutable:Connect.federation_name)
+  return federation_name_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- ::std::string* Connect::release_federationname() {
-  // @@protoc_insertion_point(field_release:Connect.federationName)
+ ::std::string* Connect::release_federation_name() {
+  // @@protoc_insertion_point(field_release:Connect.federation_name)
   
-  return federationname_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return federation_name_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void Connect::set_allocated_federationname(::std::string* federationname) {
-  if (federationname != NULL) {
+ void Connect::set_allocated_federation_name(::std::string* federation_name) {
+  if (federation_name != NULL) {
     
   } else {
     
   }
-  federationname_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), federationname);
-  // @@protoc_insertion_point(field_set_allocated:Connect.federationName)
+  federation_name_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), federation_name);
+  // @@protoc_insertion_point(field_set_allocated:Connect.federation_name)
 }
 
-// optional bytes authData = 2;
-void Connect::clear_authdata() {
-  authdata_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+// optional bytes auth_data = 2;
+void Connect::clear_auth_data() {
+  auth_data_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- const ::std::string& Connect::authdata() const {
-  // @@protoc_insertion_point(field_get:Connect.authData)
-  return authdata_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+ const ::std::string& Connect::auth_data() const {
+  // @@protoc_insertion_point(field_get:Connect.auth_data)
+  return auth_data_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void Connect::set_authdata(const ::std::string& value) {
+ void Connect::set_auth_data(const ::std::string& value) {
   
-  authdata_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:Connect.authData)
+  auth_data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:Connect.auth_data)
 }
- void Connect::set_authdata(const char* value) {
+ void Connect::set_auth_data(const char* value) {
   
-  authdata_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:Connect.authData)
+  auth_data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:Connect.auth_data)
 }
- void Connect::set_authdata(const void* value, size_t size) {
+ void Connect::set_auth_data(const void* value, size_t size) {
   
-  authdata_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+  auth_data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:Connect.authData)
+  // @@protoc_insertion_point(field_set_pointer:Connect.auth_data)
 }
- ::std::string* Connect::mutable_authdata() {
+ ::std::string* Connect::mutable_auth_data() {
   
-  // @@protoc_insertion_point(field_mutable:Connect.authData)
-  return authdata_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  // @@protoc_insertion_point(field_mutable:Connect.auth_data)
+  return auth_data_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- ::std::string* Connect::release_authdata() {
-  // @@protoc_insertion_point(field_release:Connect.authData)
+ ::std::string* Connect::release_auth_data() {
+  // @@protoc_insertion_point(field_release:Connect.auth_data)
   
-  return authdata_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return auth_data_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
- void Connect::set_allocated_authdata(::std::string* authdata) {
-  if (authdata != NULL) {
+ void Connect::set_allocated_auth_data(::std::string* auth_data) {
+  if (auth_data != NULL) {
     
   } else {
     
   }
-  authdata_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), authdata);
-  // @@protoc_insertion_point(field_set_allocated:Connect.authData)
+  auth_data_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), auth_data);
+  // @@protoc_insertion_point(field_set_allocated:Connect.auth_data)
 }
 
 // optional .Requirements requirements = 3;

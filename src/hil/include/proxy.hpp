@@ -36,6 +36,11 @@ namespace zcm {
      */         
     void sensor_sub_function();
 
+    /**
+     * @brief Function for receiving service interface data
+     */         
+    void interface_sub_function();
+
   private:
     std::map<std::string, int> sensorMap;
     std::map<std::string, std::string> stateMap;

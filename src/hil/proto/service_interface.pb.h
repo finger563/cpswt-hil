@@ -107,35 +107,35 @@ class Base : public ::google::protobuf::Message /* @@protoc_insertion_point(clas
 
   // accessors -------------------------------------------------------
 
-  // optional string messageType = 1;
-  void clear_messagetype();
+  // optional string message_type = 1;
+  void clear_message_type();
   static const int kMessageTypeFieldNumber = 1;
-  const ::std::string& messagetype() const;
-  void set_messagetype(const ::std::string& value);
-  void set_messagetype(const char* value);
-  void set_messagetype(const char* value, size_t size);
-  ::std::string* mutable_messagetype();
-  ::std::string* release_messagetype();
-  void set_allocated_messagetype(::std::string* messagetype);
+  const ::std::string& message_type() const;
+  void set_message_type(const ::std::string& value);
+  void set_message_type(const char* value);
+  void set_message_type(const char* value, size_t size);
+  ::std::string* mutable_message_type();
+  ::std::string* release_message_type();
+  void set_allocated_message_type(::std::string* message_type);
 
-  // optional bytes messageData = 2;
-  void clear_messagedata();
+  // optional string message_data = 2;
+  void clear_message_data();
   static const int kMessageDataFieldNumber = 2;
-  const ::std::string& messagedata() const;
-  void set_messagedata(const ::std::string& value);
-  void set_messagedata(const char* value);
-  void set_messagedata(const void* value, size_t size);
-  ::std::string* mutable_messagedata();
-  ::std::string* release_messagedata();
-  void set_allocated_messagedata(::std::string* messagedata);
+  const ::std::string& message_data() const;
+  void set_message_data(const ::std::string& value);
+  void set_message_data(const char* value);
+  void set_message_data(const char* value, size_t size);
+  ::std::string* mutable_message_data();
+  ::std::string* release_message_data();
+  void set_allocated_message_data(::std::string* message_data);
 
   // @@protoc_insertion_point(class_scope:Base)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   bool _is_default_instance_;
-  ::google::protobuf::internal::ArenaStringPtr messagetype_;
-  ::google::protobuf::internal::ArenaStringPtr messagedata_;
+  ::google::protobuf::internal::ArenaStringPtr message_type_;
+  ::google::protobuf::internal::ArenaStringPtr message_data_;
   mutable int _cached_size_;
   friend void  protobuf_AddDesc_proto_2fservice_5finterface_2eproto();
   friend void protobuf_AssignDesc_proto_2fservice_5finterface_2eproto();
@@ -307,27 +307,27 @@ class Connect : public ::google::protobuf::Message /* @@protoc_insertion_point(c
 
   // accessors -------------------------------------------------------
 
-  // optional string federationName = 1;
-  void clear_federationname();
+  // optional string federation_name = 1;
+  void clear_federation_name();
   static const int kFederationNameFieldNumber = 1;
-  const ::std::string& federationname() const;
-  void set_federationname(const ::std::string& value);
-  void set_federationname(const char* value);
-  void set_federationname(const char* value, size_t size);
-  ::std::string* mutable_federationname();
-  ::std::string* release_federationname();
-  void set_allocated_federationname(::std::string* federationname);
+  const ::std::string& federation_name() const;
+  void set_federation_name(const ::std::string& value);
+  void set_federation_name(const char* value);
+  void set_federation_name(const char* value, size_t size);
+  ::std::string* mutable_federation_name();
+  ::std::string* release_federation_name();
+  void set_allocated_federation_name(::std::string* federation_name);
 
-  // optional bytes authData = 2;
-  void clear_authdata();
+  // optional bytes auth_data = 2;
+  void clear_auth_data();
   static const int kAuthDataFieldNumber = 2;
-  const ::std::string& authdata() const;
-  void set_authdata(const ::std::string& value);
-  void set_authdata(const char* value);
-  void set_authdata(const void* value, size_t size);
-  ::std::string* mutable_authdata();
-  ::std::string* release_authdata();
-  void set_allocated_authdata(::std::string* authdata);
+  const ::std::string& auth_data() const;
+  void set_auth_data(const ::std::string& value);
+  void set_auth_data(const char* value);
+  void set_auth_data(const void* value, size_t size);
+  ::std::string* mutable_auth_data();
+  ::std::string* release_auth_data();
+  void set_allocated_auth_data(::std::string* auth_data);
 
   // optional .Requirements requirements = 3;
   bool has_requirements() const;
@@ -343,8 +343,8 @@ class Connect : public ::google::protobuf::Message /* @@protoc_insertion_point(c
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   bool _is_default_instance_;
-  ::google::protobuf::internal::ArenaStringPtr federationname_;
-  ::google::protobuf::internal::ArenaStringPtr authdata_;
+  ::google::protobuf::internal::ArenaStringPtr federation_name_;
+  ::google::protobuf::internal::ArenaStringPtr auth_data_;
   ::Requirements* requirements_;
   mutable int _cached_size_;
   friend void  protobuf_AddDesc_proto_2fservice_5finterface_2eproto();
@@ -1063,92 +1063,92 @@ class Service : public ::google::protobuf::Message /* @@protoc_insertion_point(c
 #if !PROTOBUF_INLINE_NOT_IN_HEADERS
 // Base
 
-// optional string messageType = 1;
-inline void Base::clear_messagetype() {
-  messagetype_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+// optional string message_type = 1;
+inline void Base::clear_message_type() {
+  message_type_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline const ::std::string& Base::messagetype() const {
-  // @@protoc_insertion_point(field_get:Base.messageType)
-  return messagetype_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline const ::std::string& Base::message_type() const {
+  // @@protoc_insertion_point(field_get:Base.message_type)
+  return message_type_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void Base::set_messagetype(const ::std::string& value) {
+inline void Base::set_message_type(const ::std::string& value) {
   
-  messagetype_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:Base.messageType)
+  message_type_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:Base.message_type)
 }
-inline void Base::set_messagetype(const char* value) {
+inline void Base::set_message_type(const char* value) {
   
-  messagetype_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:Base.messageType)
+  message_type_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:Base.message_type)
 }
-inline void Base::set_messagetype(const char* value, size_t size) {
+inline void Base::set_message_type(const char* value, size_t size) {
   
-  messagetype_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+  message_type_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:Base.messageType)
+  // @@protoc_insertion_point(field_set_pointer:Base.message_type)
 }
-inline ::std::string* Base::mutable_messagetype() {
+inline ::std::string* Base::mutable_message_type() {
   
-  // @@protoc_insertion_point(field_mutable:Base.messageType)
-  return messagetype_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  // @@protoc_insertion_point(field_mutable:Base.message_type)
+  return message_type_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline ::std::string* Base::release_messagetype() {
-  // @@protoc_insertion_point(field_release:Base.messageType)
+inline ::std::string* Base::release_message_type() {
+  // @@protoc_insertion_point(field_release:Base.message_type)
   
-  return messagetype_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return message_type_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void Base::set_allocated_messagetype(::std::string* messagetype) {
-  if (messagetype != NULL) {
+inline void Base::set_allocated_message_type(::std::string* message_type) {
+  if (message_type != NULL) {
     
   } else {
     
   }
-  messagetype_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), messagetype);
-  // @@protoc_insertion_point(field_set_allocated:Base.messageType)
+  message_type_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), message_type);
+  // @@protoc_insertion_point(field_set_allocated:Base.message_type)
 }
 
-// optional bytes messageData = 2;
-inline void Base::clear_messagedata() {
-  messagedata_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+// optional string message_data = 2;
+inline void Base::clear_message_data() {
+  message_data_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline const ::std::string& Base::messagedata() const {
-  // @@protoc_insertion_point(field_get:Base.messageData)
-  return messagedata_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline const ::std::string& Base::message_data() const {
+  // @@protoc_insertion_point(field_get:Base.message_data)
+  return message_data_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void Base::set_messagedata(const ::std::string& value) {
+inline void Base::set_message_data(const ::std::string& value) {
   
-  messagedata_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:Base.messageData)
+  message_data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:Base.message_data)
 }
-inline void Base::set_messagedata(const char* value) {
+inline void Base::set_message_data(const char* value) {
   
-  messagedata_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:Base.messageData)
+  message_data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:Base.message_data)
 }
-inline void Base::set_messagedata(const void* value, size_t size) {
+inline void Base::set_message_data(const char* value, size_t size) {
   
-  messagedata_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+  message_data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:Base.messageData)
+  // @@protoc_insertion_point(field_set_pointer:Base.message_data)
 }
-inline ::std::string* Base::mutable_messagedata() {
+inline ::std::string* Base::mutable_message_data() {
   
-  // @@protoc_insertion_point(field_mutable:Base.messageData)
-  return messagedata_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  // @@protoc_insertion_point(field_mutable:Base.message_data)
+  return message_data_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline ::std::string* Base::release_messagedata() {
-  // @@protoc_insertion_point(field_release:Base.messageData)
+inline ::std::string* Base::release_message_data() {
+  // @@protoc_insertion_point(field_release:Base.message_data)
   
-  return messagedata_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return message_data_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void Base::set_allocated_messagedata(::std::string* messagedata) {
-  if (messagedata != NULL) {
+inline void Base::set_allocated_message_data(::std::string* message_data) {
+  if (message_data != NULL) {
     
   } else {
     
   }
-  messagedata_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), messagedata);
-  // @@protoc_insertion_point(field_set_allocated:Base.messageData)
+  message_data_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), message_data);
+  // @@protoc_insertion_point(field_set_allocated:Base.message_data)
 }
 
 // -------------------------------------------------------------------
@@ -1219,92 +1219,92 @@ Requirements::streams() const {
 
 // Connect
 
-// optional string federationName = 1;
-inline void Connect::clear_federationname() {
-  federationname_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+// optional string federation_name = 1;
+inline void Connect::clear_federation_name() {
+  federation_name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline const ::std::string& Connect::federationname() const {
-  // @@protoc_insertion_point(field_get:Connect.federationName)
-  return federationname_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline const ::std::string& Connect::federation_name() const {
+  // @@protoc_insertion_point(field_get:Connect.federation_name)
+  return federation_name_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void Connect::set_federationname(const ::std::string& value) {
+inline void Connect::set_federation_name(const ::std::string& value) {
   
-  federationname_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:Connect.federationName)
+  federation_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:Connect.federation_name)
 }
-inline void Connect::set_federationname(const char* value) {
+inline void Connect::set_federation_name(const char* value) {
   
-  federationname_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:Connect.federationName)
+  federation_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:Connect.federation_name)
 }
-inline void Connect::set_federationname(const char* value, size_t size) {
+inline void Connect::set_federation_name(const char* value, size_t size) {
   
-  federationname_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+  federation_name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:Connect.federationName)
+  // @@protoc_insertion_point(field_set_pointer:Connect.federation_name)
 }
-inline ::std::string* Connect::mutable_federationname() {
+inline ::std::string* Connect::mutable_federation_name() {
   
-  // @@protoc_insertion_point(field_mutable:Connect.federationName)
-  return federationname_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  // @@protoc_insertion_point(field_mutable:Connect.federation_name)
+  return federation_name_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline ::std::string* Connect::release_federationname() {
-  // @@protoc_insertion_point(field_release:Connect.federationName)
+inline ::std::string* Connect::release_federation_name() {
+  // @@protoc_insertion_point(field_release:Connect.federation_name)
   
-  return federationname_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return federation_name_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void Connect::set_allocated_federationname(::std::string* federationname) {
-  if (federationname != NULL) {
+inline void Connect::set_allocated_federation_name(::std::string* federation_name) {
+  if (federation_name != NULL) {
     
   } else {
     
   }
-  federationname_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), federationname);
-  // @@protoc_insertion_point(field_set_allocated:Connect.federationName)
+  federation_name_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), federation_name);
+  // @@protoc_insertion_point(field_set_allocated:Connect.federation_name)
 }
 
-// optional bytes authData = 2;
-inline void Connect::clear_authdata() {
-  authdata_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+// optional bytes auth_data = 2;
+inline void Connect::clear_auth_data() {
+  auth_data_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline const ::std::string& Connect::authdata() const {
-  // @@protoc_insertion_point(field_get:Connect.authData)
-  return authdata_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+inline const ::std::string& Connect::auth_data() const {
+  // @@protoc_insertion_point(field_get:Connect.auth_data)
+  return auth_data_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void Connect::set_authdata(const ::std::string& value) {
+inline void Connect::set_auth_data(const ::std::string& value) {
   
-  authdata_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:Connect.authData)
+  auth_data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:Connect.auth_data)
 }
-inline void Connect::set_authdata(const char* value) {
+inline void Connect::set_auth_data(const char* value) {
   
-  authdata_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:Connect.authData)
+  auth_data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:Connect.auth_data)
 }
-inline void Connect::set_authdata(const void* value, size_t size) {
+inline void Connect::set_auth_data(const void* value, size_t size) {
   
-  authdata_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+  auth_data_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:Connect.authData)
+  // @@protoc_insertion_point(field_set_pointer:Connect.auth_data)
 }
-inline ::std::string* Connect::mutable_authdata() {
+inline ::std::string* Connect::mutable_auth_data() {
   
-  // @@protoc_insertion_point(field_mutable:Connect.authData)
-  return authdata_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  // @@protoc_insertion_point(field_mutable:Connect.auth_data)
+  return auth_data_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline ::std::string* Connect::release_authdata() {
-  // @@protoc_insertion_point(field_release:Connect.authData)
+inline ::std::string* Connect::release_auth_data() {
+  // @@protoc_insertion_point(field_release:Connect.auth_data)
   
-  return authdata_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return auth_data_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void Connect::set_allocated_authdata(::std::string* authdata) {
-  if (authdata != NULL) {
+inline void Connect::set_allocated_auth_data(::std::string* auth_data) {
+  if (auth_data != NULL) {
     
   } else {
     
   }
-  authdata_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), authdata);
-  // @@protoc_insertion_point(field_set_allocated:Connect.authData)
+  auth_data_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), auth_data);
+  // @@protoc_insertion_point(field_set_allocated:Connect.auth_data)
 }
 
 // optional .Requirements requirements = 3;

@@ -5,8 +5,8 @@ syntax = "proto3";
 // e.g. "Connect" or "SensorData", so that the receiving code can
 // handle de-serialization properly.
 message Base {
-  string messageType = 1;
-  bytes messageData = 2;
+  string message_type = 1;
+  string message_data = 2;
 }
 
 // These encode the required connections (bi-directional), including
@@ -23,8 +23,8 @@ message Requirements {
 // connection, and 3) if the requirements for the connection can be
 // met.
 message Connect {
-  string federationName = 1;
-  bytes authData = 2;
+  string federation_name = 1;
+  bytes auth_data = 2;
   Requirements requirements = 3;
 }
 

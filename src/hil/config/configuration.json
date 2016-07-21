@@ -243,6 +243,13 @@
 		    "Function": "state_sub_function",
 		    "Endpoints" : ["tcp://127.0.0.1:5556"]
 		},
+		{
+		    "Name" : "interface_sub",
+		    "Priority": 60,
+		    "Filter": "",
+		    "Function": "interface_sub_function",
+		    "Endpoints" : ["tcp://127.0.0.1:5558"]
+		}
 	    ] 
 	    "Publishers" : [
 		{
