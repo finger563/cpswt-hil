@@ -21,11 +21,14 @@ message Requirements {
 // Response message with status depending on if 1) the federate is
 // allowed to connect, 2) the HiL has the resources for the
 // connection, and 3) if the requirements for the connection can be
-// met.
+// met.  The response will be sent to the 'connection' passed through
+// in the connect message.  In this implementation, the 'connection'
+// will be a zmq socket string on which the federate is listening.
 message Connect {
   string federation_name = 1;
   bytes auth_data = 2;
   Requirements requirements = 3;
+  string connection = 4;
 }
 
 // This is the response that will be sent for any interactions (such

@@ -92,10 +92,11 @@ void protobuf_AssignDesc_proto_2fservice_5finterface_2eproto() {
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Requirements, _internal_metadata_),
       GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Requirements, _is_default_instance_));
   Connect_descriptor_ = file->message_type(2);
-  static const int Connect_offsets_[3] = {
+  static const int Connect_offsets_[4] = {
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Connect, federation_name_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Connect, auth_data_),
     GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Connect, requirements_),
+    GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Connect, connection_),
   };
   Connect_reflection_ =
     ::google::protobuf::internal::GeneratedMessageReflection::NewGeneratedMessageReflection(
@@ -291,20 +292,20 @@ void protobuf_AddDesc_proto_2fservice_5finterface_2eproto() {
     "\n\035proto/service_interface.proto\"2\n\004Base\022"
     "\024\n\014message_type\030\001 \001(\t\022\024\n\014message_data\030\002 "
     "\001(\t\"D\n\014Requirements\022\032\n\010services\030\001 \003(\0132\010."
-    "Service\022\030\n\007streams\030\002 \003(\0132\007.Stream\"Z\n\007Con"
+    "Service\022\030\n\007streams\030\002 \003(\0132\007.Stream\"n\n\007Con"
     "nect\022\027\n\017federation_name\030\001 \001(\t\022\021\n\tauth_da"
     "ta\030\002 \001(\014\022#\n\014requirements\030\003 \001(\0132\r.Require"
-    "ments\"8\n\010Response\022\014\n\004code\030\001 \001(\003\022\017\n\007messa"
-    "ge\030\002 \001(\t\022\r\n\005value\030\003 \001(\014\"%\n\004Node\022\014\n\004name\030"
-    "\001 \001(\t\022\017\n\007address\030\002 \001(\t\"\027\n\004Time\022\017\n\007second"
-    "s\030\001 \001(\001\":\n\rNetworkPacket\022\033\n\014destinations"
-    "\030\001 \003(\0132\005.Node\022\014\n\004data\030\002 \001(\014\"8\n\014AbstractD"
-    "ata\022\014\n\004name\030\001 \001(\t\022\014\n\004type\030\002 \001(\t\022\014\n\004data\030"
-    "\003 \001(\014\"U\n\006Stream\022\025\n\006source\030\001 \001(\0132\005.Node\022\033"
-    "\n\004data\030\002 \001(\0132\r.AbstractData\022\027\n\010interval\030"
-    "\003 \001(\0132\005.Time\"F\n\007Service\022\033\n\014destinations\030"
-    "\001 \003(\0132\005.Node\022\036\n\007command\030\002 \001(\0132\r.Abstract"
-    "Datab\006proto3", 652);
+    "ments\022\022\n\nconnection\030\004 \001(\t\"8\n\010Response\022\014\n"
+    "\004code\030\001 \001(\003\022\017\n\007message\030\002 \001(\t\022\r\n\005value\030\003 "
+    "\001(\014\"%\n\004Node\022\014\n\004name\030\001 \001(\t\022\017\n\007address\030\002 \001"
+    "(\t\"\027\n\004Time\022\017\n\007seconds\030\001 \001(\001\":\n\rNetworkPa"
+    "cket\022\033\n\014destinations\030\001 \003(\0132\005.Node\022\014\n\004dat"
+    "a\030\002 \001(\014\"8\n\014AbstractData\022\014\n\004name\030\001 \001(\t\022\014\n"
+    "\004type\030\002 \001(\t\022\014\n\004data\030\003 \001(\014\"U\n\006Stream\022\025\n\006s"
+    "ource\030\001 \001(\0132\005.Node\022\033\n\004data\030\002 \001(\0132\r.Abstr"
+    "actData\022\027\n\010interval\030\003 \001(\0132\005.Time\"F\n\007Serv"
+    "ice\022\033\n\014destinations\030\001 \003(\0132\005.Node\022\036\n\007comm"
+    "and\030\002 \001(\0132\r.AbstractDatab\006proto3", 672);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "proto/service_interface.proto", &protobuf_RegisterTypes);
   Base::default_instance_ = new Base();
@@ -1055,6 +1056,7 @@ Requirements::streams() const {
 const int Connect::kFederationNameFieldNumber;
 const int Connect::kAuthDataFieldNumber;
 const int Connect::kRequirementsFieldNumber;
+const int Connect::kConnectionFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 Connect::Connect()
@@ -1083,6 +1085,7 @@ void Connect::SharedCtor() {
   federation_name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   auth_data_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   requirements_ = NULL;
+  connection_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 
 Connect::~Connect() {
@@ -1093,6 +1096,7 @@ Connect::~Connect() {
 void Connect::SharedDtor() {
   federation_name_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   auth_data_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  connection_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (this != default_instance_) {
     delete requirements_;
   }
@@ -1129,6 +1133,7 @@ void Connect::Clear() {
   auth_data_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (GetArenaNoVirtual() == NULL && requirements_ != NULL) delete requirements_;
   requirements_ = NULL;
+  connection_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 
 bool Connect::MergePartialFromCodedStream(
@@ -1176,6 +1181,23 @@ bool Connect::MergePartialFromCodedStream(
          parse_requirements:
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_requirements()));
+        } else {
+          goto handle_unusual;
+        }
+        if (input->ExpectTag(34)) goto parse_connection;
+        break;
+      }
+
+      // optional string connection = 4;
+      case 4: {
+        if (tag == 34) {
+         parse_connection:
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_connection()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->connection().data(), this->connection().length(),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "Connect.connection"));
         } else {
           goto handle_unusual;
         }
@@ -1229,6 +1251,16 @@ void Connect::SerializeWithCachedSizes(
       3, *this->requirements_, output);
   }
 
+  // optional string connection = 4;
+  if (this->connection().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->connection().data(), this->connection().length(),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "Connect.connection");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      4, this->connection(), output);
+  }
+
   // @@protoc_insertion_point(serialize_end:Connect)
 }
 
@@ -1260,6 +1292,17 @@ void Connect::SerializeWithCachedSizes(
         3, *this->requirements_, false, target);
   }
 
+  // optional string connection = 4;
+  if (this->connection().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->connection().data(), this->connection().length(),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "Connect.connection");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        4, this->connection(), target);
+  }
+
   // @@protoc_insertion_point(serialize_to_array_end:Connect)
   return target;
 }
@@ -1287,6 +1330,13 @@ int Connect::ByteSize() const {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
         *this->requirements_);
+  }
+
+  // optional string connection = 4;
+  if (this->connection().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->connection());
   }
 
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
@@ -1324,6 +1374,10 @@ void Connect::MergeFrom(const Connect& from) {
   if (from.has_requirements()) {
     mutable_requirements()->::Requirements::MergeFrom(from.requirements());
   }
+  if (from.connection().size() > 0) {
+
+    connection_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.connection_);
+  }
 }
 
 void Connect::CopyFrom(const ::google::protobuf::Message& from) {
@@ -1353,6 +1407,7 @@ void Connect::InternalSwap(Connect* other) {
   federation_name_.Swap(&other->federation_name_);
   auth_data_.Swap(&other->auth_data_);
   std::swap(requirements_, other->requirements_);
+  connection_.Swap(&other->connection_);
   _internal_metadata_.Swap(&other->_internal_metadata_);
   std::swap(_cached_size_, other->_cached_size_);
 }
@@ -1492,6 +1547,50 @@ void Connect::set_allocated_requirements(::Requirements* requirements) {
     
   }
   // @@protoc_insertion_point(field_set_allocated:Connect.requirements)
+}
+
+// optional string connection = 4;
+void Connect::clear_connection() {
+  connection_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ const ::std::string& Connect::connection() const {
+  // @@protoc_insertion_point(field_get:Connect.connection)
+  return connection_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ void Connect::set_connection(const ::std::string& value) {
+  
+  connection_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:Connect.connection)
+}
+ void Connect::set_connection(const char* value) {
+  
+  connection_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:Connect.connection)
+}
+ void Connect::set_connection(const char* value, size_t size) {
+  
+  connection_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:Connect.connection)
+}
+ ::std::string* Connect::mutable_connection() {
+  
+  // @@protoc_insertion_point(field_mutable:Connect.connection)
+  return connection_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ ::std::string* Connect::release_connection() {
+  // @@protoc_insertion_point(field_release:Connect.connection)
+  
+  return connection_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+ void Connect::set_allocated_connection(::std::string* connection) {
+  if (connection != NULL) {
+    
+  } else {
+    
+  }
+  connection_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), connection);
+  // @@protoc_insertion_point(field_set_allocated:Connect.connection)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS

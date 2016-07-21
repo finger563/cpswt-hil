@@ -338,6 +338,17 @@ class Connect : public ::google::protobuf::Message /* @@protoc_insertion_point(c
   ::Requirements* release_requirements();
   void set_allocated_requirements(::Requirements* requirements);
 
+  // optional string connection = 4;
+  void clear_connection();
+  static const int kConnectionFieldNumber = 4;
+  const ::std::string& connection() const;
+  void set_connection(const ::std::string& value);
+  void set_connection(const char* value);
+  void set_connection(const char* value, size_t size);
+  ::std::string* mutable_connection();
+  ::std::string* release_connection();
+  void set_allocated_connection(::std::string* connection);
+
   // @@protoc_insertion_point(class_scope:Connect)
  private:
 
@@ -346,6 +357,7 @@ class Connect : public ::google::protobuf::Message /* @@protoc_insertion_point(c
   ::google::protobuf::internal::ArenaStringPtr federation_name_;
   ::google::protobuf::internal::ArenaStringPtr auth_data_;
   ::Requirements* requirements_;
+  ::google::protobuf::internal::ArenaStringPtr connection_;
   mutable int _cached_size_;
   friend void  protobuf_AddDesc_proto_2fservice_5finterface_2eproto();
   friend void protobuf_AssignDesc_proto_2fservice_5finterface_2eproto();
@@ -1343,6 +1355,50 @@ inline void Connect::set_allocated_requirements(::Requirements* requirements) {
     
   }
   // @@protoc_insertion_point(field_set_allocated:Connect.requirements)
+}
+
+// optional string connection = 4;
+inline void Connect::clear_connection() {
+  connection_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& Connect::connection() const {
+  // @@protoc_insertion_point(field_get:Connect.connection)
+  return connection_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void Connect::set_connection(const ::std::string& value) {
+  
+  connection_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:Connect.connection)
+}
+inline void Connect::set_connection(const char* value) {
+  
+  connection_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:Connect.connection)
+}
+inline void Connect::set_connection(const char* value, size_t size) {
+  
+  connection_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:Connect.connection)
+}
+inline ::std::string* Connect::mutable_connection() {
+  
+  // @@protoc_insertion_point(field_mutable:Connect.connection)
+  return connection_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* Connect::release_connection() {
+  // @@protoc_insertion_point(field_release:Connect.connection)
+  
+  return connection_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void Connect::set_allocated_connection(::std::string* connection) {
+  if (connection != NULL) {
+    
+  } else {
+    
+  }
+  connection_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), connection);
+  // @@protoc_insertion_point(field_set_allocated:Connect.connection)
 }
 
 // -------------------------------------------------------------------
