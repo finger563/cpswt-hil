@@ -84,6 +84,14 @@ reception time in either the proxy federate or the HiL service,
 i.e. the message generation timestamp (if applicable) occurs whenever
 the proces sees the message.  Keeps the specification simple.
 
+Additionally, since hardware-in-the-loop runs in physical-time, HiL
+processes (be they computational or physical) cannot be paused in the
+same way that federation execution can be paused (or waits for
+federates to catch up). Instead, for the data and interactions with
+the HiL to be meaningful, the federation needs to run faster than real
+time, limited to real-time, to ensure that there is enough spare
+processing and communication time for interacting with the HiL.
+
 Most importantly: all interfaces need meaningful errors, esp. the
 querying interfaces.
 
