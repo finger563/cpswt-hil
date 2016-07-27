@@ -84,6 +84,21 @@ reception time in either the proxy federate or the HiL service,
 i.e. the message generation timestamp (if applicable) occurs whenever
 the proces sees the message.  Keeps the specification simple.
 
+For messages and systems/federations where timing is important
+(e.g. when batching messages to be sent within the HiL at a future
+time and sending them out to the proxy service now), a measure of time
+synchronization is important. The proxy and the gateway must establish
+what the offset is from the simulation time to the real-world
+wall-clock time of the HiL which is measured and configured once (at
+initilialization) and used for timestamp translation for the rest of
+the simulation. Note that this linear transformation works only if the
+federation is running in real-time (i.e. the simulations can all run
+faster than real-time) so that the offset between wall-clock time and
+simulation time is constant and predictable. Without this constraint,
+the conversion between simulation time and wall-clock time would be
+much more difficult and would require even more communications and
+measurement overhead.
+
 Additionally, since hardware-in-the-loop runs in physical-time, HiL
 processes (be they computational or physical) cannot be paused in the
 same way that federation execution can be paused (or waits for
